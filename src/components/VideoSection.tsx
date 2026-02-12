@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
-/** 可替换为研究院自有宣传片：修改下方 videoId 或 src 中的 YouTube 视频 ID */
-const VIDEO_ID = "3tUDgQOw2-c";
+const VIDEO_SRC =
+  "https://static.bingotalk.cn/bingodev/video/2025032318115600.mp4";
 
 export function VideoSection() {
   return (
@@ -30,22 +30,16 @@ export function VideoSection() {
           className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-border bg-ink shadow-lg"
         >
           <div className="relative aspect-video">
-            <iframe
-              className="absolute inset-0 h-full w-full"
-              src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0`}
-              title="巴蜀文化 / 四川风貌 宣传片"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <div className="border-t border-border bg-paper px-6 py-3">
-            <p className="text-xs text-muted">
-              可替换为研究院自有宣传片或合作项目视频，修改{" "}
-              <code className="rounded bg-paper-warm px-1.5 font-mono text-ink">
-                src/components/VideoSection.tsx
-              </code>{" "}
-              中的 <code className="rounded bg-paper-warm px-1.5 font-mono text-ink">VIDEO_ID</code> 即可。
-            </p>
+            <video
+              className="h-full w-full object-cover"
+              src={VIDEO_SRC}
+              title="巴蜀风貌宣传片"
+              controls
+              playsInline
+              preload="metadata"
+            >
+              您的浏览器暂不支持视频播放。
+            </video>
           </div>
         </motion.div>
       </div>

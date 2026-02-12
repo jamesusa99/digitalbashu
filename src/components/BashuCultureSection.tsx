@@ -8,9 +8,8 @@ const CULTURE_ITEMS = [
   {
     title: "古蜀文明 · 三星堆",
     desc: "神秘的古蜀国与三星堆遗址，青铜神树、纵目面具见证巴蜀千年文明。",
-    // 优先使用本地图片：将图片放到 public/images/sanxingdui.jpg 即可
     image:
-      "https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=800&q=80",
+      "https://img2.baidu.com/it/u=770521053,1233159494&fm=253&app=138&f=JPEG?w=800&h=1200",
     icon: Landmark,
     alt: "古蜀文明",
   },
@@ -18,7 +17,7 @@ const CULTURE_ITEMS = [
     title: "川剧变脸",
     desc: "川剧绝活变脸、吐火，一转身一张脸，演绎巴蜀人的豪迈与幽默。",
     image:
-      "https://images.unsplash.com/photo-1528642474498-1af0c17fd8e3?w=800&q=80",
+      "https://gips1.baidu.com/it/u=2122084108,243822367&fm=3074&app=3074&f=JPEG?w=800&h=1109&type=normal&func=S",
     icon: Drama,
     alt: "川剧变脸",
   },
