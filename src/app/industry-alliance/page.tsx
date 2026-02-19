@@ -1,138 +1,232 @@
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import Link from "next/link";
-import { ClipboardList } from "lucide-react";
+import { ClipboardList, FileText, Download } from "lucide-react";
+import { MemberLogoWall } from "./MemberLogoWall";
 
 export const metadata = {
   title: "产业联盟 | 巴蜀文化数字研究院",
   description:
-    "巴蜀文化创意（数字）产教联盟汇聚文博、文旅、科技、教育等机构，共同推动巴蜀文化数字化转型与产业应用。汇聚产业力量，价值共赢。",
+    "巴蜀文化创意（数字）产教联盟汇聚文博、文旅、科技、教育等机构，政行校企协同，推动巴蜀文化数字化转型。汇聚产业力量，价值共赢。",
 };
+
+const charterItems = [
+  {
+    title: "协同机制",
+    desc: "建立政府、企业、学校、科研机构多方参与的理事会，推行多元协同的治理模式。",
+  },
+  {
+    title: "标准统一",
+    desc: "共同建立统一的策划、供应链、内容生产、数据存储及结算的标准价值体系。",
+  },
+  {
+    title: "资源共享",
+    desc: "联盟成员享有巴蜀文化数字资源库的使用权及数字化交互平台的技术支持。",
+  },
+  {
+    title: "价值共创",
+    desc: "推动「农文旅+电竞+电商+文创」的多维融合，共同打造数字化新型文化业态。",
+  },
+];
+
+const memberCategories = [
+  {
+    cat: "学术与科研机构",
+    items: [
+      "北京大学（沉浸式文旅体验技术支持）",
+      "电子科技大学（AIGC 实训平台研发）",
+      "四川文化产业职业学院",
+    ],
+  },
+  {
+    cat: "文博与文化机构",
+    items: [
+      "三星堆博物馆",
+      "四川省文化产业发展促进中心",
+      "四渡赤水纪念馆",
+      "红军长征邛崃纪念馆",
+    ],
+  },
+  {
+    cat: "科技与运营企业",
+    items: [
+      "腾讯电竞（「村游技」电竞赛事协作）",
+      "浪潮集团",
+      "四川川博明昌文化艺术发展有限公司",
+      "各市州国有平台公司",
+    ],
+  },
+  {
+    cat: "教育与培训平台",
+    items: [
+      "四川省干部函授学院",
+      "四川省委党校",
+      "缤果课堂",
+    ],
+  },
+];
+
+const events = [
+  {
+    title: "「农文旅+」品牌融合发展高峰论坛",
+    desc: "聚合优质资源，讨论市场动态与品牌抱团发展策略。",
+  },
+  {
+    title: "数字化交互项目发布会",
+    desc: "如「云景长征」等重大文旅项目的启动与阶段性成果展示。",
+  },
+  {
+    title: "「村游技」电竞赛事",
+    desc: "定期举办具有全国影响力的电竞赛事，吸引年轻群体关注巴蜀文化。",
+  },
+  {
+    title: "新媒体人才培训营",
+    desc: "面向 21 个地市州开展农文旅 IP 品牌孵化与短视频直播矩阵营销培训。",
+  },
+];
+
+const joinSteps = [
+  { title: "在线申请", desc: "通过本页面下方或「联系我们」提交单位简介与合作意向" },
+  { title: "资格审核", desc: "联盟理事会根据成员准入标准进行初步评估" },
+  { title: "签署章程", desc: "审核通过后，双方正式签署《巴蜀文化创意（数字）产教联盟章程》" },
+  { title: "正式授牌", desc: "在联盟年度会议或专题活动中进行成员单位授牌" },
+];
 
 export default function IndustryAlliancePage() {
   return (
     <>
       <PageHero
-        title="产业联盟"
-        subtitle="汇聚产业力量，价值共赢"
+        title="巴蜀文化创意（数字）产教联盟"
+        subtitle="汇聚产业力量，实现价值共赢"
       />
-      <Section title="联盟介绍" subtitle="巴蜀文化创意（数字）产教联盟">
-        <div className="mx-auto max-w-3xl">
+
+      {/* 成员 Logo 墙 */}
+      <section className="border-y border-border bg-paper-warm py-8">
+        <div className="overflow-hidden">
+          <MemberLogoWall />
+        </div>
+      </section>
+
+      {/* 1. 联盟简介与核心使命 */}
+      <Section title="联盟简介与核心使命" subtitle="巴蜀文化创意（数字）产教联盟">
+        <div className="mx-auto max-w-4xl space-y-6">
           <p className="text-center text-lg text-muted">
-            产业联盟汇聚文博、文旅、科技、教育等机构，共同推动巴蜀文化数字化转型与产业应用。
+            巴蜀文化创意（数字）产教联盟是由巴蜀文化数字研究院发起，汇聚文博、文旅、科技、教育等机构的跨界组织。联盟致力于共同推动巴蜀文化数字化转型，构建「政行校企」多主体协同的市域产教联合体，实现产业创新与文化价值的深度融合。
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-xl border border-border bg-snow p-4 text-center shadow-sm">
-              <p className="font-serif text-2xl font-semibold text-bashu-bronze">21+</p>
+              <p className="font-serif text-2xl font-semibold text-bashu-bronze">21</p>
               <p className="mt-1 text-sm text-muted">四川地市州覆盖</p>
             </div>
             <div className="rounded-xl border border-border bg-snow p-4 text-center shadow-sm">
-              <p className="font-serif text-2xl font-semibold text-bashu-bronze">产学研</p>
-              <p className="mt-1 text-sm text-muted">一体化生态</p>
+              <p className="font-serif text-2xl font-semibold text-bashu-bronze">政行校企</p>
+              <p className="mt-1 text-sm text-muted">多主体协同</p>
             </div>
             <div className="rounded-xl border border-border bg-snow p-4 text-center shadow-sm">
-              <p className="font-serif text-2xl font-semibold text-bashu-bronze">供应链</p>
-              <p className="mt-1 text-sm text-muted">与标准价值体系</p>
+              <p className="font-serif text-2xl font-semibold text-bashu-bronze">市域</p>
+              <p className="mt-1 text-sm text-muted">产教联合体</p>
             </div>
             <div className="rounded-xl border border-border bg-snow p-4 text-center shadow-sm">
-              <p className="font-serif text-2xl font-semibold text-bashu-bronze">共创</p>
-              <p className="mt-1 text-sm text-muted">资源共享与协同</p>
+              <p className="font-serif text-2xl font-semibold text-bashu-bronze">价值共赢</p>
+              <p className="mt-1 text-sm text-muted">产业与文化融合</p>
             </div>
           </div>
         </div>
       </Section>
 
-      <Section title="联盟章程" subtitle="宗旨与运作规范">
-        <div className="mx-auto max-w-3xl space-y-6 text-muted">
-          <p>
-            巴蜀文化创意（数字）产教联盟以「传承、创新、协同、包容、专业」为核心价值观，致力于构建政产学研用协同创新体系，促进巴蜀文化资源向数字资产转化，推动成果全民共享与产业价值共创。
+      {/* 2. 联盟章程概要 */}
+      <Section title="联盟章程概要" subtitle="Alliance Charter · 共同准则保障生态健康发展">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-8 text-center text-muted">
+            联盟成员需遵循以下共同准则，以确保生态的健康发展：
           </p>
-          <div className="rounded-xl border border-border bg-paper-warm p-6">
-            <p className="text-sm text-muted">
-              联盟章程全文及实施细则将根据成员大会决议定期更新，欢迎有意加入的机构通过
-              <Link
-                href="/contact"
-                className="mx-1 text-bashu-bronze underline hover:text-bashu-bronze-light"
-              >
-                联系我们
-              </Link>
-              获取最新版本。
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      <Section title="成员名单" subtitle="联盟伙伴机构">
-        <div className="mx-auto max-w-3xl">
-          <p className="mb-6 text-center text-muted">
-            联盟成员涵盖地方政府、文博机构、高等院校、科技企业等多方主体，持续扩大中。
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              { cat: "文博机构", items: ["三星堆博物馆", "四川省文化产业发展促进中心"] },
-              { cat: "高等院校", items: ["北京大学", "四川大学", "电子科技大学", "重庆艺术文化职业学院"] },
-              { cat: "科技企业", items: ["浪潮集团", "广东缤果奇迹 AI", "四川萃雅教育科技"] },
-              { cat: "地方政府", items: ["巴中市", "成都市温江区", "岳池县"] },
-            ].map((group, i) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {charterItems.map((item, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-border bg-snow p-4 shadow-sm"
+                className="rounded-2xl border border-border bg-snow p-6 shadow-sm"
               >
-                <p className="font-medium text-ink">{group.cat}</p>
-                <p className="mt-2 text-sm text-muted">{group.items.join("、")}</p>
+                <h3 className="font-serif font-semibold text-ink">{item.title}</h3>
+                <p className="mt-3 text-sm text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-center text-sm text-muted">
-            完整成员名单与更新信息可联系研究院获取。
-          </p>
         </div>
       </Section>
 
-      <Section title="年度峰会" subtitle="联盟大会与活动">
-        <div className="mx-auto max-w-3xl space-y-4 text-muted">
-          <p>
-            联盟定期举办年度峰会、专题研讨会及项目对接会，促进成员间资源共享、技术协同与成果转化。
+      {/* 3. 成员单位名单 */}
+      <Section title="成员单位名单" subtitle="Partial Member List">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-8 text-center text-muted">
+            联盟已连接四川省内 21 个地市州及全国重点文旅、非遗资源。
           </p>
-          <div className="rounded-xl border border-border bg-paper-warm p-6">
-            <p className="text-sm text-muted">
-              年度峰会日程、议题及报名方式将提前通过研究院官网及联盟成员渠道发布，敬请关注。
-            </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {memberCategories.map((group, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-border bg-snow p-6 shadow-sm"
+              >
+                <h3 className="font-serif font-semibold text-ink">{group.cat}</h3>
+                <ul className="mt-4 space-y-2">
+                  {group.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-muted">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-bashu-bronze/60" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
 
-      <Section title="加入申请方式" subtitle="从意向到签约">
-        <div className="mx-auto max-w-3xl space-y-6">
-          <p className="text-muted">
-            欢迎符合联盟定位的文博、文旅、科技、教育等机构申请加入。申请流程与
-            <Link
-              href="/cooperation"
-              className="text-bashu-bronze underline hover:text-bashu-bronze-light"
-            >
-              合作交流
-            </Link>
-            洽谈流程一致：
-          </p>
-          <ol className="space-y-3">
-            {[
-              "意向提交：通过网站「联系我们」或邮件提交加入申请及机构简介",
-              "资格初审：研究院对申请机构进行行业匹配与资源互补性评估",
-              "方案论证：组织专家座谈，明确合作方向与联盟权益",
-              "联盟签约：正式签署联盟协议，纳入成员名录并享受联盟资源",
-            ].map((step, i) => (
-              <li
+      {/* 4. 年度峰会与重点活动 */}
+      <Section title="年度峰会与重点活动" subtitle="高规格活动提升品牌影响力">
+        <div className="mx-auto max-w-4xl">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {events.map((event, i) => (
+              <div
                 key={i}
-                className="flex gap-3 rounded-lg border border-border bg-snow px-4 py-3"
+                className="rounded-2xl border border-border bg-snow p-6 shadow-sm"
               >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-bashu-bronze/10 text-sm font-medium text-bashu-bronze">
-                  {i + 1}
-                </span>
-                <span className="text-muted">{step}</span>
-              </li>
+                <h3 className="font-serif font-semibold text-ink">{event.title}</h3>
+                <p className="mt-3 text-sm text-muted">{event.desc}</p>
+              </div>
             ))}
-          </ol>
-          <div className="flex justify-center pt-4">
+          </div>
+        </div>
+      </Section>
+
+      {/* 5. 加入申请方式 */}
+      <Section title="加入申请方式" subtitle="How to Join">
+        <div className="mx-auto max-w-3xl space-y-8">
+          <div className="rounded-xl border border-border bg-paper-warm p-6">
+            <h3 className="font-medium text-ink">申请条件</h3>
+            <p className="mt-2 text-muted">
+              具备文博资源、数字化技术、文旅运营能力或产教融合需求的企事业单位及社会团体。
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-4 font-medium text-ink">加入流程</h3>
+            <ol className="space-y-3">
+              {joinSteps.map((step, i) => (
+                <li
+                  key={i}
+                  className="flex gap-4 rounded-xl border border-border bg-snow px-4 py-4"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-bashu-bronze/10 font-serif font-semibold text-bashu-bronze">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-medium text-ink">{step.title}</p>
+                    <p className="mt-0.5 text-sm text-muted">{step.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-bashu-bronze bg-bashu-bronze px-6 py-3 text-sm font-medium text-snow transition hover:bg-bashu-bronze-light"
@@ -141,6 +235,57 @@ export default function IndustryAlliancePage() {
               提交加入申请
             </Link>
           </div>
+        </div>
+      </Section>
+
+      {/* 资源下载区 */}
+      <Section title="资源下载" subtitle="联盟章程与白皮书">
+        <div className="mx-auto max-w-2xl">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <a
+              href="#"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+            >
+              <div className="rounded-xl bg-bashu-bronze/10 p-3">
+                <FileText className="h-8 w-8 text-bashu-bronze" />
+              </div>
+              <div className="flex-1">
+                <p className="font-medium text-ink group-hover:text-bashu-bronze">
+                  《巴蜀文化创意（数字）产教联盟章程》
+                </p>
+                <p className="mt-1 flex items-center gap-1 text-sm text-muted">
+                  <Download className="h-4 w-4" />
+                  PDF 下载
+                </p>
+              </div>
+            </a>
+            <a
+              href="#"
+              className="group flex items-center gap-4 rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+            >
+              <div className="rounded-xl bg-bashu-bronze/10 p-3">
+                <FileText className="h-8 w-8 text-bashu-bronze" />
+              </div>
+              <div className="flex-1">
+                <p className="font-medium text-ink group-hover:text-bashu-bronze">
+                  《巴蜀文化数字化白皮书》
+                </p>
+                <p className="mt-1 flex items-center gap-1 text-sm text-muted">
+                  预览 / 下载
+                </p>
+              </div>
+            </a>
+          </div>
+          <p className="mt-6 text-center text-sm text-muted">
+            完整版文档可通过
+            <Link
+              href="/contact"
+              className="mx-1 text-bashu-bronze underline hover:text-bashu-bronze-light"
+            >
+              联系我们
+            </Link>
+            获取。
+          </p>
         </div>
       </Section>
     </>
