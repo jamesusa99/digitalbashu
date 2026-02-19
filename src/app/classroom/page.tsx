@@ -12,7 +12,12 @@ import {
   Users,
   Briefcase,
   ExternalLink,
+  BookMarked,
+  Radio,
+  GraduationCap,
+  Microscope,
 } from "lucide-react";
+import { ClassroomPartnerWall } from "./ClassroomPartnerWall";
 
 export const metadata = {
   title: "文化课堂 | 巴蜀文化数字研究院",
@@ -126,10 +131,83 @@ export default function ClassroomPage() {
 
       {/* 引言 */}
       <Section title="文化课堂与实训资源" subtitle="Education & Training">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-4xl space-y-6">
           <p className="text-center text-muted">
-            研究院依托「产教融合」优势，联合四川萃雅教育、四川新传媒集团及成都传媒集团等核心伙伴，构建了从基础素养到高端实训的数字文化课程体系。
+            <strong className="text-ink">巴蜀文化数字研究院</strong>
+            充分依托
+            <strong className="text-ink">「产教融合」</strong>
+            的机制优势，联合
+            <strong className="text-ink">新华文轩</strong>
+            、
+            <strong className="text-ink">四川新传媒集团</strong>
+            、
+            <strong className="text-ink">成都传媒集团</strong>
+            以及
+            <strong className="text-ink">四川萃雅教育（缤果课堂）</strong>
+            等核心战略合作伙伴，共同构建了涵盖从基础数字素养提升、非遗数字化传承到高端产业项目实训的全链条、多层次数字文化课程体系。
           </p>
+          <p className="text-center text-muted">
+            该体系重点依托
+            <strong className="text-ink">新华文轩</strong>
+            在文化出版与教育服务领域的深厚积淀，结合
+            <strong className="text-ink">四川新传媒集团</strong>
+            与
+            <strong className="text-ink">成都传媒集团</strong>
+            的传播矩阵与新媒体流量运营能力，并引入
+            <strong className="text-ink">四川萃雅教育</strong>
+            成熟的 AI 数字研学课程模型，旨在打造全国领先的数字文化人才培养高地，推动巴蜀文化数字化成果的社会化应用与全民共享。
+          </p>
+        </div>
+      </Section>
+
+      {/* 合作伙伴 Logo 墙与分类 */}
+      <Section title="战略合作伙伴" subtitle="在国家文化数字化战略引领下，深度整合行业头部资源">
+        <div className="mx-auto max-w-5xl space-y-8">
+          <div className="overflow-hidden rounded-2xl border border-border bg-paper-warm py-6">
+            <ClassroomPartnerWall />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                type: "文化教育出版",
+                org: "新华文轩",
+                fields: "数字化出版、教育资源分发与教材研发",
+                icon: BookMarked,
+              },
+              {
+                type: "传媒与传播",
+                org: "四川新传媒集团 / 成都传媒集团",
+                fields: "新媒体矩阵运营、IP 流量变现、实训就业",
+                icon: Radio,
+              },
+              {
+                type: "数字技术教育",
+                org: "四川萃雅教育（缤果课堂）",
+                fields: "AIGC 非遗课程、AI 数字研学、青少年数字素养",
+                icon: GraduationCap,
+              },
+              {
+                type: "学术与技术支持",
+                org: "北京大学 / 电子科技大学",
+                fields: "沉浸式交互技术、AIGC 实训平台底层架构",
+                icon: Microscope,
+              },
+            ].map(({ type, org, fields, icon: Icon }, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-border bg-snow p-5 shadow-sm transition hover:border-bashu-bronze/30 hover:shadow-md"
+              >
+                <div className="rounded-lg bg-bashu-bronze/10 p-2 w-fit">
+                  <Icon className="h-5 w-5 text-bashu-bronze" />
+                </div>
+                <p className="mt-3 text-xs font-medium uppercase tracking-wider text-brocade-gold">
+                  {type}
+                </p>
+                <p className="mt-1 font-serif font-semibold text-ink">{org}</p>
+                <p className="mt-2 text-sm text-muted">{fields}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
