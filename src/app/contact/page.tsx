@@ -4,7 +4,8 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export const metadata = {
   title: "联系我们 | 巴蜀文化数字研究院",
-  description: "巴蜀文化数字研究院联系方式",
+  description:
+    "巴蜀文化数字研究院联系方式。地址：成都市双流区怡心街道锦江路四段399号。电话：028-85769208。",
 };
 
 export default function ContactPage() {
@@ -20,14 +21,20 @@ export default function ContactPage() {
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-bashu-bronze" />
             <div>
               <p className="font-medium text-ink">地址</p>
-              <p className="text-muted">四川省成都市</p>
+              <p className="text-muted">
+                成都市双流区怡心街道锦江路四段399号
+                <span className="mt-1 block text-sm">（四川文化产业职业学院，地铁5号线骑龙站可达）</span>
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Phone className="mt-0.5 h-5 w-5 shrink-0 text-bashu-bronze" />
             <div>
               <p className="font-medium text-ink">电话</p>
-              <p className="text-muted">请根据实际情况填写</p>
+              <p className="text-muted">
+                028-85769208（学校总机）
+                <span className="mt-1 block text-sm">028-85769752、028-85766716（招生咨询）</span>
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
