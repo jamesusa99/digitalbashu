@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 export const metadata = {
   title: "About Us | Bashu Culture Digital Research Institute",
   description:
-    "The Bashu Culture Digital Research Institute is a high-level academic and industry integration platform established under the guidance of the Sichuan and Chongqing Propaganda Departments to advance China's national cultural digitization strategy.",
+    "Guardian of the Digital Cultural Vein & Engine of the Twin-City Economy. Established under the Sichuan and Chongqing Propaganda Departments to advance the Chengdu-Chongqing Dual-City Economic Circle and China's National Cultural Digitization Strategy.",
 };
 
 export default function AboutPageEN() {
@@ -12,32 +12,90 @@ export default function AboutPageEN() {
     <>
       <PageHero
         title="About Us"
-        subtitle="Where digital technology awakens ancient Bashu culture, and cultural heritage lights the way forward"
+        subtitle="Guardian of the Digital Cultural Vein & Engine of the Twin-City Economy"
       />
-      <Section title="Institute Overview" subtitle="Inheritance · Innovation · Collaboration · Inclusiveness · Professionalism">
+
+      {/* I. Strategic Positioning */}
+      <Section title="Strategic Positioning" subtitle="Serving the National Strategic Hinterland, Building a New Digital Stronghold">
         <div className="mx-auto max-w-3xl space-y-6 text-muted">
           <p>
-            The Bashu Culture Digital Research Institute was established under the joint guidance of the Sichuan Provincial Committee Publicity Department and the Chongqing Municipal Committee Publicity Department, in order to implement the national strategies of the "Chengdu-Chongqing Dual-City Economic Circle" and the "National Cultural Digitization Strategy." The Institute is anchored in a national-level industry-education integration practice base, dedicated to excavating, reconstructing, and disseminating the rich heritage of Bashu culture through cutting-edge digital technology.
+            The Bashu Culture Digital Research Institute was established under the joint guidance of the Sichuan Provincial Committee Publicity Department and the Chongqing Municipal Committee Publicity Department. It serves as a core vehicle for deeply implementing the national strategies of the{" "}
+            <strong className="text-ink">"Chengdu-Chongqing Dual-City Economic Circle"</strong>{" "}
+            and the{" "}
+            <strong className="text-ink">"National Cultural Digitization Strategy."</strong>
           </p>
           <p>
-            Bashu culture is an integral part of China's excellent traditional culture, encompassing the mysterious and splendid Sanxingdui-Jinsha civilization, the magnificent Red Army Long March culture, the exquisite intangible cultural heritage crafts, and the open and inclusive cultural heritage of the Tibetan, Qiang, and Yi communities. The Institute not only carries the academic mission of preserving and transmitting Bashu culture in a digital context, but also leverages the collaborative advantage of a "government-industry-school-enterprise" multi-stakeholder model to lead the transformation of cultural resources into digital assets.
+            Sichuan is a strategically vital province and a cornerstone of China's national rejuvenation. The Institute is deeply aware of the cultural resilience behind the saying "as long as Sichuan stands, China endures." Rooted in this strategically significant, populous province, we are committed to leveraging cutting-edge digital technology to transform the cultural DNA of this heroic land into{" "}
+            <strong className="text-ink">new quality productive forces</strong>
+            , providing lasting digital cultural momentum for high-quality development in western China.
           </p>
         </div>
       </Section>
-      <Section title="Leadership & Framework" subtitle="Research · Digital Projects · Integrated Publishing · Cross-sector Collaboration">
+
+      {/* II. Cultural Foundation */}
+      <Section title="Cultural Foundation" subtitle="A Lens on Every Mountain and River — Documenting a Millennium of Cultural Heritage">
         <div className="mx-auto max-w-3xl space-y-6 text-muted">
+          <p>Bashu culture, as a vital component of Chinese civilization, has nurtured:</p>
+          <ul className="space-y-4">
+            <li className="rounded-xl border border-border bg-snow p-5">
+              <p className="font-medium text-ink">Brilliant Civilization</p>
+              <p className="mt-2">From the mysterious relics of Sanxingdui and Jinsha, to the waterway trade and navigation culture born at the confluence of great rivers.</p>
+            </li>
+            <li className="rounded-xl border border-border bg-snow p-5">
+              <p className="font-medium text-ink">Red Cultural Legacy</p>
+              <p className="mt-2">Sichuan was a key turning point of the Long March, carrying the heroic epic of "crossing the snow mountains and the grasslands."</p>
+            </li>
+            <li className="rounded-xl border border-border bg-snow p-5">
+              <p className="font-medium text-ink">Masterful Intangible Heritage</p>
+              <p className="mt-2">Millennia-old Shu brocade, lacquerware, and carvings — embodying the rich abundance and dynamic ingenuity of the Land of Abundance.</p>
+            </li>
+          </ul>
           <p>
-            The Institute is led by Sichuan Vocational College of Cultural Industries, with Professor Chen Jianwen serving as Executive Dean. Building on its academic foundation, the Institute has developed a four-wheel-drive development framework: <strong className="text-ink">Academic Research + Digital Projects + Integrated Publishing + Cross-sector Collaboration</strong>. Key initiatives include the "Cloud View Long March" digital interactive project, Bashu culture AI short drama productions, and the nationally significant publication <em>Costumes and Crafts of China's Ethnic Minorities: The Qiang People</em>.
+            The Institute upholds the philosophy of{" "}
+            <strong className="text-ink">"A Panoramic Lens on Bashu Culture — Digital Heritage, Shared by All,"</strong>{" "}
+            using AI and VR/AR technology to "awaken" the cultural vein and breathe new life into millennia of history in the digital world.
           </p>
         </div>
       </Section>
-      <Section title="Industry-Education Integration & Alliance" subtitle="A Unified Ecosystem of Research, Education, Industry, and Application">
+
+      {/* III. Industry Synergy */}
+      <Section title="Industry Synergy" subtitle="Gathering the Strength of the Fourth Pole — Co-creating Shared Value">
         <div className="mx-auto max-w-3xl space-y-6 text-muted">
           <p>
-            As a committed driver of the national cultural digitization strategy and industry-education integration, the Institute founded the <strong className="text-ink">"Bashu Cultural Creativity (Digital) Industry-Education Alliance"</strong>, partnering with <strong className="text-ink">Xinhua Wenxuan</strong>, Sichuan New Media Group, Chengdu Media Group, and Sichuan Cuiya Education among other industry leaders, to deepen school-enterprise collaboration.
+            By establishing a{" "}
+            <strong className="text-ink">"government-industry-school-enterprise" multi-stakeholder governance model</strong>
+            , the Institute founded the{" "}
+            <strong className="text-ink">"Bashu Cultural Creativity (Digital) Industry-Education Alliance,"</strong>{" "}
+            deeply connecting industry leaders and academic institutions:
           </p>
+          <ul className="space-y-3">
+            <li className="flex gap-3 rounded-xl border border-border bg-snow p-4">
+              <span className="shrink-0 rounded-full bg-bashu-bronze/10 px-2.5 py-0.5 text-xs font-medium text-bashu-bronze">Media</span>
+              <span>Partnering with Sichuan New Media Group and Chengdu Media Group to build a new media traffic matrix and IP incubation base.</span>
+            </li>
+            <li className="flex gap-3 rounded-xl border border-border bg-snow p-4">
+              <span className="shrink-0 rounded-full bg-bashu-bronze/10 px-2.5 py-0.5 text-xs font-medium text-bashu-bronze">Publishing</span>
+              <span>Collaborating with Xinhua Wenxuan to advance digital integrated publishing and efficient distribution of educational resources.</span>
+            </li>
+            <li className="flex gap-3 rounded-xl border border-border bg-snow p-4">
+              <span className="shrink-0 rounded-full bg-bashu-bronze/10 px-2.5 py-0.5 text-xs font-medium text-bashu-bronze">Education</span>
+              <span>Partnering with Sichuan Cuiya Education (Bingo Classroom) to bring AI digital curricula to homes across the country.</span>
+            </li>
+            <li className="flex gap-3 rounded-xl border border-border bg-snow p-4">
+              <span className="shrink-0 rounded-full bg-bashu-bronze/10 px-2.5 py-0.5 text-xs font-medium text-bashu-bronze">Research</span>
+              <span>Relying on leading institutions such as Sichuan University and UESTC to tackle immersive experience and AIGC core technology challenges.</span>
+            </li>
+          </ul>
+        </div>
+      </Section>
+
+      {/* IV. Future Vision */}
+      <Section title="Future Vision" subtitle="Building a Model Digital Cultural Industry Cluster">
+        <div className="mx-auto max-w-3xl space-y-6 text-muted">
           <p>
-            By establishing a <strong className="text-ink">"government-industry-school-enterprise" multi-stakeholder governance model</strong>, the Institute has successfully built a <strong className="text-ink">full-chain ecosystem</strong> integrating academic research, digital projects, training, and social service. Through landmark achievements such as the "Cloud View Long March" interactive platform, the "Bingo Classroom" intangible heritage digital curriculum, and the <strong className="text-ink">Bashu Cultural Creativity District</strong>, the Institute continues converting cultural resources into nationally competitive digital assets and new cultural business formats, amplifying Bashu culture's social reach and supporting high-quality regional economic development.
+            Backed by the daily movement of millions of people between Chengdu and Chongqing and a combined GDP exceeding 10 trillion yuan, the Institute is accelerating major initiatives including{" "}
+            <strong className="text-ink">"Cloud View Long March"</strong>{" "}
+            and the Cultural Digital Asset Key Laboratory. We are not only recording history — we are using "digital technology to awaken Bashu's cultural vein," infusing the soul of innovation into this strategic cornerstone, and writing the digital chapter of the great rejuvenation of the Chinese nation.
           </p>
         </div>
       </Section>

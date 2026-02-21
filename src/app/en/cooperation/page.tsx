@@ -17,7 +17,7 @@ const partners = [
     subtitle: "School-government synergy driving rural revitalization",
     objects: "Bazhong Municipal Committee/Government, Wenjiang Cultural Creativity Zone, Yuechi County Committee Organization Department",
     cases: [
-      { name: "Bazhong Cultural Tourism Research Forum", desc: "Executive Dean Prof. Chen Jianwen led a team of experts from the National Radio and Television Administration laboratory to Bazhong, providing decision-making consultation for integrating local red cultural resources with virtual reality audio-visual technology." },
+      { name: "Bazhong Cultural Tourism Research Forum", desc: "The Institute led a team of experts from the National Radio and Television Administration laboratory to Bazhong, providing decision-making consultation for integrating local red cultural resources with virtual reality audio-visual technology." },
       { name: '"Urban Cultural Aesthetics" Training', desc: "Conducted thematic training for newly appointed Yuechi County officials, delivering digital urban management and aesthetic construction solutions from foundational principles." },
     ],
     outcomes: "Industry-government research reports, digital literacy enhancement programs for local officials",
