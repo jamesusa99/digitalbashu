@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 
-const navItems = [
+const navItemsCN = [
   { href: "/", label: "首页" },
   { href: "/about", label: "关于我们" },
   { href: "/research", label: "研究方向" },
@@ -18,29 +18,49 @@ const navItems = [
   { href: "/contact", label: "联系我们" },
 ];
 
+const navItemsEN = [
+  { href: "/en", label: "Home" },
+  { href: "/en/about", label: "About" },
+  { href: "/en/research", label: "Research" },
+  { href: "/en/digital-collections", label: "Digital" },
+  { href: "/en/outcomes", label: "Outcomes" },
+  { href: "/en/industry-alliance", label: "Alliance" },
+  { href: "/en/cooperation", label: "Cooperation" },
+  { href: "/en/classroom", label: "Classroom" },
+  { href: "/en/contact", label: "Contact" },
+];
+
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isEN = pathname.startsWith("/en");
+  const navItems = isEN ? navItemsEN : navItemsCN;
+
+  // Build the equivalent page URL in the other language
+  const toggleHref = isEN
+    ? pathname === "/en" ? "/" : pathname.replace(/^\/en/, "") || "/"
+    : pathname === "/" ? "/en" : `/en${pathname}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/80 bg-snow/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
-          href="/"
-          className="font-serif text-lg font-semibold text-bashu-bronze transition hover:text-bashu-bronze-light sm:text-xl"
+          href={isEN ? "/en" : "/"}
+          className="font-serif text-base font-semibold text-bashu-bronze transition hover:text-bashu-bronze-light sm:text-lg"
         >
-          巴蜀文化数字研究院
+          {isEN ? "Bashu Culture Digital Institute" : "巴蜀文化数字研究院"}
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
-            const isAlliance = item.href === "/industry-alliance";
+            const isAlliance = item.href.endsWith("/industry-alliance");
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-md px-3 py-2 text-sm transition ${
+                className={`relative rounded-md px-2.5 py-2 text-sm transition ${
                   isActive
                     ? "text-bashu-bronze font-medium"
                     : "text-foreground/80 hover:text-bashu-bronze hover:bg-paper-warm/60"
@@ -59,14 +79,24 @@ export function Header() {
           })}
         </nav>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-ink lg:hidden"
-          onClick={() => setMobileOpen((o) => !o)}
-          aria-label={mobileOpen ? "关闭菜单" : "打开菜单"}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            href={toggleHref}
+            className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-muted transition hover:border-bashu-bronze/50 hover:text-bashu-bronze"
+            title={isEN ? "切换中文" : "Switch to English"}
+          >
+            <Languages size={14} />
+            {isEN ? "中文" : "EN"}
+          </Link>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-ink lg:hidden"
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
