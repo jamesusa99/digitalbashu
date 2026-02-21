@@ -35,6 +35,11 @@ export default function AboutPage() {
           <p>
             作为<strong className="text-ink">巴蜀文化创意（数字）产教联盟学术引领单位</strong>，研究院牵头开展联盟学术研究、人才培养、成果转化相关工作，重点推进巴蜀非遗传承人培育与数字化传承；依托缤果AI学院建设「AI教育实践基地」，开展AI技术在文化数字化领域的教育实训与研发应用；联动非遗数字研学，搭建非遗传承实践平台，推动非遗文化活态落地。
           </p>
+          <p>
+            研究院秉承
+            <strong className="text-ink">「巴蜀文化全景呈现，数字化成果全民共享」</strong>
+            的理念，通过 AI、VR/AR 等技术「唤醒」文脉，让千年历史在数字世界中焕发新生。
+          </p>
         </div>
       </Section>
 
@@ -47,32 +52,6 @@ export default function AboutPage() {
               <p className="mt-2 text-sm text-muted leading-relaxed">{p.desc}</p>
             </div>
           ))}
-        </div>
-      </Section>
-
-      {/* 三、文化根基 */}
-      <Section title="文化根基" subtitle="一镜一山河，影像记录千年文脉">
-        <div className="mx-auto max-w-3xl space-y-6 text-muted">
-          <p>巴蜀文化作为中华文明的重要组成部分，孕育了：</p>
-          <ul className="space-y-4">
-            <li className="rounded-xl border border-border bg-snow p-5">
-              <p className="font-medium text-ink">璀璨文明</p>
-              <p className="mt-2">从三星堆、金沙的神秘遗迹，到江河交错衍生的航运与商贸文化。</p>
-            </li>
-            <li className="rounded-xl border border-border bg-snow p-5">
-              <p className="font-medium text-ink">红色基因</p>
-              <p className="mt-2">四川作为长征途中的关键转折地，承载着「翻雪山、过草地」的英雄史诗。</p>
-            </li>
-            <li className="rounded-xl border border-border bg-snow p-5">
-              <p className="font-medium text-ink">匠心非遗</p>
-              <p className="mt-2">千年流传的蜀锦、漆艺与雕刻，象征着天府之国的物产丰盈与灵动智慧。</p>
-            </li>
-          </ul>
-          <p>
-            研究院秉承
-            <strong className="text-ink">「巴蜀文化全景呈现，数字化成果全民共享」</strong>
-            的理念，通过 AI、VR/AR 等技术「唤醒」文脉，让千年历史在数字世界中焕发新生。
-          </p>
         </div>
       </Section>
 
