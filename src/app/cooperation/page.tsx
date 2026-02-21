@@ -1,261 +1,218 @@
-import { PageHero } from "@/components/PageHero";
-import { Section } from "@/components/Section";
-import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-import { Building2, Landmark, GraduationCap, Factory } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "合作交流 | 巴蜀文化数字研究院",
   description:
-    "地方政府、文博机构、高校与企业合作案例。合作领域：红色文化数字化、非遗资产化、AI+文创培训、产教融合。洽谈流程与联系方式。",
+    "产学研用一体化，共建巴蜀文化数字生态。四大合作方向：产学研合作、企业合作、机构合作、国际合作。典型合作案例、行业活动，诚邀各方共建巴蜀文化数字化传承体系。",
 };
 
-const partners = [
+const DIRECTIONS = [
   {
-    icon: Building2,
-    title: "地方政府与文旅部门",
-    subtitle: "校地协同推动乡村振兴",
-    objects: "巴中市委/市政府、温江区文化创意区、岳池县委组织部",
-    cases: [
-      {
-        name: "巴中市文旅调研座谈",
-        desc: "研究院率领国家广电总局实验室专家团队赴巴中，为当地红色文化资源与虚拟现实视听技术的融合提供决策咨询。",
-      },
-      {
-        name: "「城市文化美学塑造」培训",
-        desc: "为岳池县新任领导干部开展专题培训，从底层逻辑输出数字化城市管理与美学建设方案。",
-      },
-    ],
-    outcomes: "政产学研调研报告、地方干部数字化素养提升工程",
+    icon: "🎓",
+    title: "产学研合作",
+    desc: "与省内外顶尖高校合作开展巴蜀文化数字化研究、人才培养项目，共建AIGC实训平台与文化数字化课程体系。",
+    tags: ["高校合作", "联合科研", "人才培养", "课程共建"],
   },
   {
-    icon: Landmark,
-    title: "文博机构",
-    subtitle: "数字化赋能「活态传承」",
-    objects: "三星堆博物馆、四川省文化产业发展促进中心、各地方非遗中心",
-    cases: [
-      {
-        name: "三星堆数字版权与艺术品开发",
-        desc: "通过数字化建模与确权，推动三星堆文博资源向数字资产转化。",
-      },
-      {
-        name: "「5·18 国际博物馆日」联合策展",
-        desc: "依托巴蜀文化体验空间，与校内外文博单位共同举办数字化非遗体验展。",
-      },
-    ],
-    outcomes: "数字藏品、数字化展览方案、非遗数据标注体系",
+    icon: "🏢",
+    title: "企业合作",
+    desc: "与文创、文旅、数字技术企业合作开发项目，共享巴蜀文化资源数据库，开展IP孵化与联合运营。",
+    tags: ["项目合作", "IP孵化", "联合运营", "技术对接"],
   },
   {
-    icon: GraduationCap,
-    title: "高等院校",
-    subtitle: "跨校联合攻关核心技术",
-    objects: "北京大学、四川大学、电子科技大学、重庆艺术文化职业学院",
-    cases: [
-      {
-        name: "AIGC 实训平台研发",
-        desc: "联合电子科技大学共同研发 AI 通识课程，搭建服务于师生的数字化艺术创作平台。",
-      },
-      {
-        name: "川渝产教联盟构建",
-        desc: "联合重庆艺职院筹建「巴蜀文化创意（数字）产教联盟」，实现成渝双城经济圈资源共享。",
-      },
-    ],
-    outcomes: "联合科研课题、学分互认课程、数字化教材",
+    icon: "🏛",
+    title: "机构合作",
+    desc: "与各地文旅局、文化机构、非遗保护中心合作开展文化传承与数字化保护项目，共建文化资源共享平台。",
+    tags: ["文旅机构", "文博合作", "非遗保护", "资源共享"],
   },
   {
-    icon: Factory,
-    title: "企业与产业联盟",
-    subtitle: "技术驱动新质生产力",
-    objects: "浪潮集团、广东缤果奇迹 AI、四川萃雅教育科技",
-    cases: [
-      {
-        name: "「云景长征」技术集成",
-        desc: "与科技公司深度协作，攻关 AI+VR+AR 融合技术，构建沉浸式红色文化体验。",
-      },
-      {
-        name: "数字化非遗进社区",
-        desc: "联合企业研发《典籍里的首饰》等 AI 数字课程，已在东安湖社区、金凤社区等多地落地运营。",
-      },
-    ],
-    outcomes: "数字化课程包、软件著作权、商业化文旅 IP",
+    icon: "🌐",
+    title: "国际合作",
+    desc: "与海外巴蜀文化研究机构、国际文化组织合作，推动巴蜀文化国际化传播，讲好中国文化故事。",
+    tags: ["海外机构", "国际组织", "文化传播", "跨境合作"],
   },
 ];
 
-const cooperationFields = [
+const CASES = [
   {
-    title: "项目策划",
-    desc: "红色文化/非遗数字化交互项目申报与建设",
+    category: "产学研",
+    partner: "产教联盟高校群",
+    title: "巴蜀文化数字化人才培养项目",
+    desc: "联合四川大学、电子科技大学、四川师范大学等多所高校，共建巴蜀文化数字化专业课程体系，培养复合型文化产业人才，推动产教融合落地。",
   },
   {
-    title: "资源转化",
-    desc: "文化资源数字化资产化、确权评估与平台对接",
+    category: "政企合作",
+    partner: "四川省文旅厅",
+    title: "数字文旅示范项目",
+    desc: "与四川省、市文旅局合作开展景区数字化升级，将三星堆、川剧等巴蜀文化资源转化为沉浸式文旅体验，打造省级文化数字化示范案例。",
   },
   {
-    title: "人才培养",
-    desc: "AI+文创专项培训、产教融合实训基地建设",
-  },
-  {
-    title: "社会服务",
-    desc: "数字化研学旅行产品研发、银发经济数字课程包定制",
+    category: "企业合作",
+    partner: "缤果AI学院",
+    title: "巴蜀文化AI教育实践基地",
+    desc: "与缤果AI学院深度合作，建立「巴蜀文化数字研究院AI教育实践基地」，联合研发AI文化创意实训课程，培育AI+文化数字化复合型人才并定向产业输送。",
   },
 ];
 
-const processSteps = [
-  { step: 1, title: "意向提交", desc: "通过网站「合作留言」板块或邮件提交初步需求" },
-  { step: 2, title: "专家初评", desc: "由研究院学术委员会评估项目的文化价值与技术可行性" },
-  { step: 3, title: "方案论证", desc: "组织跨学科专家团（涵盖高校、文创、科技领域）进行现场调研与方案编写" },
-  { step: 4, title: "联盟签约", desc: "正式签署合作协议，并可申请加入「巴蜀文化创意（数字）产教联盟」" },
+const EVENTS = [
+  {
+    statusLabel: "论坛即将举办",
+    statusColor: "bg-bashu-teal/10 text-bashu-teal",
+    timeLabel: "2026年下半年",
+    title: "2026巴蜀文化数字化发展论坛",
+    desc: "聚焦巴蜀文化数字化前沿趋势，汇聚政产学研各方力量，共探巴蜀文化数字化传承与产业落地新路径。",
+  },
+  {
+    statusLabel: "大赛开放报名",
+    statusColor: "bg-brocade-gold/15 text-brocade-gold",
+    timeLabel: "常年开放",
+    title: "巴蜀文化数字创意大赛",
+    desc: "面向全国青年的巴蜀文化数字创意大赛，征集优秀文化IP设计、数字艺术作品与创新解决方案，优秀作品纳入研究院成果库。",
+  },
+  {
+    statusLabel: "研讨定期举办",
+    statusColor: "bg-bashu-bronze/10 text-bashu-bronze",
+    timeLabel: "季度举办",
+    title: "非遗数字化传承研讨会",
+    desc: "聚焦巴蜀非遗数字化保护技术与实践，促进政府、学界、业界深度交流，产教联盟成员优先参与。",
+  },
 ];
 
 export default function CooperationPage() {
   return (
     <>
-      <PageHero
-        title="合作交流"
-        subtitle="校地协同、文博共建、校企联合，共创巴蜀文化数字化新生态"
-      />
-
-      {/* 合作伙伴与典型案例 */}
-      <Section
-        title="合作伙伴与典型案例"
-        subtitle="政产学研多方协作，成果落地共享"
-      >
-        <div className="mx-auto max-w-4xl space-y-10">
-          {partners.map((partner, i) => (
-            <div
-              key={i}
-              className="overflow-hidden rounded-2xl border border-border bg-snow shadow-sm"
-            >
-              <div className="border-b border-border bg-paper-warm px-6 py-4 sm:px-8">
-                <div className="flex items-center gap-3">
-                  <partner.icon className="h-6 w-6 text-bashu-bronze" />
-                  <div>
-                    <h3 className="font-serif text-lg font-semibold text-ink">
-                      {partner.title}
-                    </h3>
-                    <p className="text-sm text-muted">{partner.subtitle}</p>
-                  </div>
-                </div>
-                <p className="mt-2 text-sm text-muted">
-                  <span className="font-medium text-ink">合作对象：</span>
-                  {partner.objects}
-                </p>
-              </div>
-              <div className="space-y-4 p-6 sm:p-8">
-                <div>
-                  <p className="mb-2 text-sm font-medium text-ink">典型案例</p>
-                  <ul className="space-y-3">
-                    {partner.cases.map((c, j) => (
-                      <li key={j} className="text-muted">
-                        <span className="font-medium text-ink">{c.name}：</span>
-                        {c.desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <p className="rounded-lg border border-border/60 bg-paper-warm/50 px-4 py-2 text-sm text-muted">
-                  <span className="font-medium text-ink">落地成果：</span>
-                  {partner.outcomes}
-                </p>
-              </div>
-            </div>
-          ))}
+      {/* Hero */}
+      <section className="border-b border-border bg-gradient-to-b from-paper to-snow py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="font-serif text-3xl font-bold text-ink sm:text-4xl">合作交流</h1>
+          <p className="mt-3 text-lg text-muted">
+            产学研用一体化，共建巴蜀文化数字生态
+          </p>
         </div>
-      </Section>
+      </section>
 
-      {/* 合作洽谈与对接方式 */}
-      <Section
-        title="合作洽谈与对接方式"
-        subtitle="合作指南 · 从意向到签约的全流程"
-      >
-        <div className="mx-auto max-w-4xl space-y-12">
-          {/* 合作领域 */}
-          <div>
-            <h3 className="font-serif text-lg font-semibold text-ink">
-              合作领域
-            </h3>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              {cooperationFields.map((field, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl border border-border bg-snow p-4 shadow-sm"
-                >
-                  <p className="font-medium text-ink">{field.title}</p>
-                  <p className="mt-1 text-sm text-muted">{field.desc}</p>
-                </div>
-              ))}
-            </div>
+      {/* 合作方向 */}
+      <section className="bg-snow py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">合作方向</h2>
+            <p className="mt-2 text-muted">四大合作方向，全面开放，快速对接</p>
           </div>
 
-          {/* 合作洽谈流程 */}
-          <div>
-            <h3 className="font-serif text-lg font-semibold text-ink">
-              合作洽谈流程
-            </h3>
-            <ol className="mt-4 space-y-4">
-              {processSteps.map((item) => (
-                <li
-                  key={item.step}
-                  className="flex gap-4 rounded-xl border border-border bg-snow p-4 shadow-sm"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bashu-bronze/10 font-serif text-lg font-semibold text-bashu-bronze">
-                    {item.step}
-                  </span>
-                  <div>
-                    <p className="font-medium text-ink">{item.title}</p>
-                    <p className="mt-1 text-sm text-muted">{item.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          {/* 联系方式 */}
-          <div className="rounded-2xl border border-border bg-paper-warm p-6 sm:p-8">
-            <h3 className="font-serif text-lg font-semibold text-ink">
-              联系方式
-            </h3>
-            <p className="mt-2 text-sm text-muted">
-              欢迎通过以下方式与我们取得联系，或前往
-              <Link
-                href="/contact"
-                className="mx-1 text-bashu-bronze underline hover:text-bashu-bronze-light"
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {DIRECTIONS.map((dir) => (
+              <div
+                key={dir.title}
+                className="group flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
               >
-                联系我们
-              </Link>
-              页面提交合作意向。
-            </p>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-bashu-bronze" />
-                <div>
-                  <p className="text-sm font-medium text-ink">地址</p>
-                  <p className="text-sm text-muted">
-                    成都市双流区怡心街道锦江路四段399号
-                    <span className="block">（四川文化产业职业学院）</span>
-                  </p>
+                <div className="mb-4 text-3xl">{dir.icon}</div>
+                <h3 className="font-serif text-lg font-semibold text-ink">{dir.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-muted leading-relaxed">{dir.desc}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {dir.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-5 w-5 shrink-0 text-bashu-bronze" />
-                <div>
-                  <p className="text-sm font-medium text-ink">电话</p>
-                  <p className="text-sm text-muted">028-85769208（学校总机）</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-bashu-bronze" />
-                <div>
-                  <p className="text-sm font-medium text-ink">邮箱</p>
-                  <p className="text-sm text-muted">
-                    contact@digitalbashu.org.cn
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </Section>
+      </section>
+
+      {/* 合作案例 */}
+      <section className="bg-paper py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">合作案例</h2>
+            <p className="mt-2 text-muted">已有合作项目，共建巴蜀文化数字生态</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {CASES.map((c) => (
+              <div
+                key={c.title}
+                className="flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+              >
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="rounded-full bg-bashu-bronze/10 px-3 py-0.5 text-xs font-medium text-bashu-bronze">
+                    {c.category}
+                  </span>
+                  <span className="text-xs text-muted">{c.partner}</span>
+                </div>
+                <h3 className="font-serif text-base font-semibold text-ink">{c.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-muted leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 行业活动 */}
+      <section className="bg-snow py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">行业活动</h2>
+            <p className="mt-2 text-muted">巴蜀文化数字化论坛、研讨会、文创大赛</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {EVENTS.map((ev) => (
+              <div
+                key={ev.title}
+                className="flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <span className={`rounded-full px-3 py-0.5 text-xs font-medium ${ev.statusColor}`}>
+                    {ev.statusLabel}
+                  </span>
+                  <span className="text-xs text-muted">{ev.timeLabel}</span>
+                </div>
+                <h3 className="font-serif text-base font-semibold text-ink">{ev.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-muted leading-relaxed">{ev.desc}</p>
+                <button
+                  type="button"
+                  className="mt-5 rounded-full border border-bashu-bronze px-5 py-2 text-sm font-medium text-bashu-bronze transition hover:bg-paper-warm"
+                >
+                  立即报名
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 申请合作 CTA */}
+      <section className="bg-ink py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="font-serif text-2xl font-bold text-snow sm:text-3xl">申请合作</h2>
+          <p className="mt-3 text-snow/70">
+            填写合作申请，我们将在3个工作日内与您联系
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <button
+              type="button"
+              className="rounded-full bg-brocade-gold px-8 py-3 text-sm font-semibold text-ink transition hover:bg-brocade-gold/85"
+            >
+              提交合作申请
+            </button>
+            <Link
+              href="/contact"
+              className="rounded-full border border-snow/30 px-8 py-3 text-sm font-medium text-snow transition hover:border-snow/60 hover:bg-snow/10"
+            >
+              联系我们
+            </Link>
+          </div>
+          <p className="mt-6 text-sm text-snow/40">
+            或直接联系：contact@digitalbashu.org.cn
+          </p>
+        </div>
+      </section>
     </>
   );
 }
