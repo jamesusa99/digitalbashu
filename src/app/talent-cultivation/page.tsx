@@ -1,6 +1,6 @@
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
-import { Cpu, BookOpen, Award, Users, School, Microscope, Globe } from "lucide-react";
+import { Cpu, Award, Users, School, Microscope, Globe } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,24 +40,95 @@ const trainingTypes = [
     desc: "依托缤果AI学院·巴蜀文化数字研究院AI教育实践基地，开展AI教育实训，培育AI+文化数字化复合型人才，实现定向产业输送。",
     tags: ["AI文化创意实训", "AIGC技术应用", "实训课程研发", "人才定向输送"],
   },
+  {
+    icon: Microscope,
+    title: "非遗数字研学",
+    desc: "面向中小学、社区、研学基地、文旅景区提供非遗数字研学课程与实践方案，研究院提供学术课程指导与传承人资源支撑。",
+    tags: ["中小学研学", "社区推广", "文旅景区", "传承人授课"],
+  },
 ];
 
 const bingoCourses = [
   {
-    title: "《典籍里的首饰》",
-    desc: "探索传统饰品背后的历史典籍，结合数字设计模拟制作过程，体验古人审美智慧。",
+    emoji: "🎭",
+    level: "进阶 · 40学时",
+    form: "线上+线下",
+    title: "非遗数字化保护与传承",
+    desc: "系统学习非遗数字化采集、整理、展示与传播的全流程技能，结合巴蜀非遗实际案例操作，掌握传承人数字档案建设方法。",
   },
   {
-    title: "《丹漆成器》",
-    desc: "数字化呈现成都漆艺的传统工序，体验大漆文化的现代转型与美学价值。",
+    emoji: "💡",
+    level: "实战 · 32学时",
+    form: "线上",
+    title: "文化IP设计与孵化",
+    desc: "从巴蜀文化元素提炼到IP设计、产品开发、商业授权的全链条实战课程，以川剧、三星堆、大熊猫等为核心案例素材。",
   },
   {
-    title: "《木意匠心》",
-    desc: "通过数字建模解析传统木作结构，领略巴蜀建筑与家具的精巧工艺。",
+    emoji: "🗺",
+    level: "应用 · 24学时",
+    form: "线上",
+    title: "数字文旅运营与策划",
+    desc: "数字化文旅场景设计、线上推广、直播运营等实用技能训练，结合巴蜀文旅资源与实际项目案例，培养文旅数字化运营人才。",
   },
   {
-    title: "《妙笔丹青》",
-    desc: "利用数字化绘画工具，传承巴蜀传统书画的笔墨神韵与文化意境。",
+    emoji: "📊",
+    level: "专业 · 48学时",
+    form: "线上+线下",
+    title: "文化大数据分析与应用",
+    desc: "掌握文化数据采集、清洗、分析与可视化技能，服务巴蜀文化产业决策与数字资产化评估，对接文化数字化平台实操。",
+  },
+  {
+    emoji: "🤖",
+    level: "前沿 · 32学时",
+    form: "线上",
+    title: "AIGC与文化创意应用",
+    desc: "探索AI在巴蜀文化内容生产、艺术设计、非遗传承等场景的深度应用实践，每年提供2000名开放式产教融合实践名额。",
+  },
+  {
+    emoji: "🥽",
+    level: "专业 · 40学时",
+    form: "线下为主",
+    title: "VR/AR沉浸式文化体验设计",
+    desc: "学习沉浸式文化体验场景的设计、开发与运营，基于「云景长征」等重大项目，攻关全链条技术引擎，打造下一代文化体验。",
+  },
+];
+
+const internshipBases = [
+  {
+    emoji: "🎨",
+    category: "文创科技",
+    name: "文创科技企业实习基地",
+    roles: ["IP设计师", "数字内容运营", "文化数据分析师"],
+  },
+  {
+    emoji: "🗺",
+    category: "数字文旅",
+    name: "数字文旅集团实习基地",
+    roles: ["数字文旅策划", "VR体验设计", "文旅直播运营"],
+  },
+  {
+    emoji: "🏛",
+    category: "文博机构",
+    name: "巴蜀文博机构实习基地",
+    roles: ["数字化保护助理", "展陈设计", "文物数据管理"],
+  },
+];
+
+const expertGroups = [
+  {
+    emoji: "📜",
+    title: "巴蜀文化研究",
+    desc: "来自四川大学、西南大学、四川师范大学等高校的巴蜀文化、民俗学、文物保护领域权威专家，为研究院学术方向与传承人培育提供专业指导。",
+  },
+  {
+    emoji: "💻",
+    title: "数字技术专家",
+    desc: "大数据、VR/AR、AIGC、区块链等数字技术领域的产业专家与学者，为AI实训课程研发、数字化项目落地提供前沿技术支撑。",
+  },
+  {
+    emoji: "🏭",
+    title: "文化产业顾问",
+    desc: "文创、文旅、文博、IP运营等文化产业领域的资深从业者与顾问，为人才就业方向、实习基地共建与产业对接提供实践经验指导。",
   },
 ];
 
@@ -75,7 +146,7 @@ const trainingBases = [
   { name: "四川新传媒集团", role: "传媒与传播", desc: "联合开展新媒体流量运营实训，打造农文旅IP短视频直播矩阵，助力学生高质量就业。" },
   { name: "成都传媒集团", role: "传媒与传播", desc: "协同构建传媒实训基地，开展数字文化传播与IP孵化联合实训项目。" },
   { name: "缤果AI学院（AI教育实践基地）", role: "数字技术教育", desc: "作为研究院指定AI教育实践基地，承载AIGC非遗课程、AI数字研学、青少年数字素养培育的实训落地工作。" },
-  { name: "北京大学", role: "学术与技术支持", desc: "提供沉浸式文旅交互技术攻关支撑，参与「构建-融合-交互-呈现-评价」全链条技术引擎研究。" },
+  { name: "成都文旅集团", role: "文旅产业合作", desc: "联合开展成都文旅资源数字化升级与文化体验项目共建，为学员提供文旅行业实习就业对接通道。" },
   { name: "电子科技大学", role: "学术与技术支持", desc: "联合研发AIGC公选课及实训平台，为师生提供生成式人工智能创作环境。" },
   { name: "四川美术学院", role: "艺术与设计", desc: "联合开展巴蜀文化数字艺术设计实训，为文创原型研发与非遗美学研究提供艺术专业支撑。" },
   { name: "四川大学", role: "学术研究", desc: "联合开展巴蜀文化学术研究与数字人文研究，推动成渝地区双城经济圈文化研究合作。" },
@@ -124,48 +195,136 @@ export default function TalentCultivationPage() {
       </Section>
 
       {/* 缤果AI学院·AI教育实践基地 */}
-      <Section
-        title="缤果AI学院·AI教育实践基地"
-        subtitle="巴蜀文化数字研究院AI教育实践基地"
-        bg="paper"
-      >
-        <div className="mx-auto max-w-3xl space-y-4 text-muted mb-10">
-          <p>
-            缤果AI学院作为<strong className="text-ink">巴蜀文化数字研究院指定AI教育实践基地</strong>，由四川萃雅教育科技承建运营。研究院为其提供学术引领、课程研发指导与资源支撑，推动实践基地的AI实训落地、人才输送与技术转化。
-          </p>
-          <p>
-            依托AI与数字技术推动传统文化创新活化，项目实现跨区域、多场景规模化落地，覆盖四川、北京、广东、新疆等地区，深入中小学、社区、研学基地、文旅景区、校外机构等场所，打造可复制、可推广的传统文化数字传承新模式。
-          </p>
-        </div>
-        <div className="mb-6">
-          <h3 className="font-serif text-lg font-semibold text-ink mb-4">缤果课堂·非遗数字化精品课</h3>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="bg-paper py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-2">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">
+              缤果AI学院·AI教育实践基地
+            </h2>
+            <p className="mt-1 text-muted">巴蜀文化数字研究院AI教育实践基地</p>
+          </div>
+
+          <div className="mt-6 mb-10 mx-auto max-w-3xl space-y-3 text-muted">
+            <p>
+              缤果AI学院作为<strong className="text-ink">巴蜀文化数字研究院指定AI教育实践基地</strong>，由四川萃雅教育科技承建运营。研究院为其提供学术引领、课程研发指导与资源支撑，推动实践基地的AI实训落地、人才输送与技术转化。
+            </p>
+            <p>
+              依托AI与数字技术推动传统文化创新活化，项目实现跨区域、多场景规模化落地，覆盖四川、北京、广东、新疆等地区，深入中小学、社区、研学基地、文旅景区等场所，打造可复制、可推广的传统文化数字传承新模式。
+            </p>
+            <p className="text-sm text-muted/70">
+              👥 适合人群：企业员工、高校学生、文化从业者、文化爱好者
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {bingoCourses.map((c) => (
-              <div key={c.title} className="rounded-xl border border-border bg-snow p-5 shadow-sm">
-                <BookOpen className="h-7 w-7 text-bashu-bronze mb-2" />
-                <h4 className="font-semibold text-sm text-ink">{c.title}</h4>
-                <p className="mt-2 text-xs text-muted leading-relaxed">{c.desc}</p>
+              <div
+                key={c.title}
+                className="flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+              >
+                <div className="mb-3 flex items-center justify-between">
+                  <span className="text-2xl">{c.emoji}</span>
+                  <span className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted">
+                    {c.level}
+                  </span>
+                </div>
+                <h3 className="font-serif text-base font-semibold text-ink">{c.title}</h3>
+                <p className="mt-2 flex-1 text-sm text-muted leading-relaxed">{c.desc}</p>
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-xs text-muted">形式：{c.form}</span>
+                  <button
+                    type="button"
+                    className="rounded-full border border-bashu-bronze px-3 py-1 text-xs font-medium text-bashu-bronze transition hover:bg-paper-warm"
+                  >
+                    报名参加
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="mt-6">
-          <h3 className="font-serif text-lg font-semibold text-ink mb-4">前沿技术与实践课程</h3>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {[
-              { title: "AIGC文化创意实训", desc: "联合电子科技大学研发，涵盖AIGC在巴蜀文创设计、数字角色开发中的应用，每年提供2000名开放式产教融合实践名额。" },
-              { title: "VR/AR体验设计实训", desc: "基于「云景长征」等重大项目，教授沉浸式场景构建与多模态交互技术，攻关「构建-融合-交互-呈现-评价」全链条技术引擎。" },
-              { title: "文化大数据实践", desc: "学习文化资源的数据标注、确权评估及数字资产化管理流程，对接文化数字艺术品交易平台（深艺交）相关实训项目。" },
-            ].map((c) => (
-              <div key={c.title} className="rounded-xl border border-border bg-snow p-5 shadow-sm">
-                <Cpu className="h-7 w-7 text-bashu-bronze mb-2" />
-                <h4 className="font-semibold text-sm text-ink">{c.title}</h4>
-                <p className="mt-2 text-xs text-muted leading-relaxed">{c.desc}</p>
+      </section>
+
+      {/* 实习就业 */}
+      <section className="bg-snow py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">实习就业</h2>
+            <p className="mt-1 text-muted">与合作企业共建实习基地，打通「培养-实践-就业」全链条</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {internshipBases.map((base) => (
+              <div
+                key={base.name}
+                className="flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+              >
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="text-2xl">{base.emoji}</span>
+                  <span className="rounded-full bg-bashu-bronze/10 px-3 py-0.5 text-xs font-medium text-bashu-bronze">
+                    {base.category}
+                  </span>
+                </div>
+                <h3 className="font-serif text-base font-semibold text-ink">{base.name}</h3>
+                <ul className="mt-4 flex-1 space-y-2">
+                  {base.roles.map((role) => (
+                    <li key={role} className="flex items-center gap-2 text-sm text-muted">
+                      <span className="h-1.5 w-1.5 rounded-full bg-bashu-bronze/50 shrink-0" />
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  type="button"
+                  className="mt-5 rounded-full bg-bashu-bronze px-5 py-2 text-sm font-medium text-snow transition hover:bg-bashu-bronze/85"
+                >
+                  申请实习
+                </button>
               </div>
             ))}
           </div>
+
+          <div className="mt-6 rounded-2xl border border-border bg-paper p-6">
+            <h3 className="font-serif text-base font-semibold text-ink mb-2">创业扶持</h3>
+            <p className="text-sm text-muted">
+              为优秀人才提供创业扶持：
+              <span className="mx-1 font-medium text-ink">技术支持 · 资源对接 · 导师指导 · 联盟资源共享</span>
+            </p>
+          </div>
         </div>
-      </Section>
+      </section>
+
+      {/* 专家智库 */}
+      <section className="bg-paper py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <h2 className="font-serif text-2xl font-bold text-ink sm:text-3xl">专家智库</h2>
+            <p className="mt-1 text-muted">整合文化、数字领域顶尖专家，打造巴蜀文化数字化人才智库</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {expertGroups.map((group) => (
+              <div
+                key={group.title}
+                className="flex flex-col rounded-2xl border border-border bg-snow p-6 shadow-sm transition hover:border-bashu-bronze/40 hover:shadow-md"
+              >
+                <div className="mb-4 text-3xl">{group.emoji}</div>
+                <h3 className="font-serif text-base font-semibold text-ink">{group.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-muted leading-relaxed">{group.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <button
+              type="button"
+              className="rounded-full border border-bashu-bronze px-8 py-3 text-sm font-medium text-bashu-bronze transition hover:bg-paper-warm"
+            >
+              申请专家咨询
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* 巴蜀非遗传承人·核心子模块 */}
       <Section title="巴蜀非遗传承人" subtitle="数字化传承 · 学术培育 · 实践落地">
@@ -228,57 +387,6 @@ export default function TalentCultivationPage() {
             在成都市双流区建设14000平方米实训街区，包含"村游技"电竞赛事中心与新媒体流量运营基地，每年提供
             <strong className="text-ink">2000名</strong>
             开放式产教融合实践名额，连接四川21个地市州，构建统一的供应链与标准价值体系。
-          </p>
-        </div>
-      </Section>
-
-      {/* 实训成果 */}
-      <Section title="人才培养成果" subtitle="学术指引下的产业落地成效">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { label: "数字化精品课程", value: "4门 / 30课时", note: "《典籍里的首饰》《丹漆成器》《木意匠心》《妙笔丹青》，全程在线可学" },
-            { label: "在线学习覆盖人数", value: "累计超3000人", note: "覆盖成都市8所中小学及5个社区，包括金凤社区、东安湖社区等" },
-            { label: "AI实训实践名额", value: "每年2000人", note: "面向联盟院校及社会合作院校开放，实现定向人才输送" },
-            { label: "研学落地覆盖地区", value: "4大区域", note: "四川、北京、广东、新疆，深入中小学、社区、研学基地、文旅景区" },
-            { label: "产教联盟覆盖范围", value: "四川21地市州", note: "构建统一供应链与标准价值体系，推动人才培养落地" },
-            { label: "空中课堂支教服务", value: "凉山州等地区", note: "将数字化文化课程引入凉山州等地，助力教育均衡发展" },
-          ].map((item, i) => (
-            <div key={i} className="rounded-xl border border-border bg-snow p-6 shadow-sm text-center">
-              <div className="font-serif text-2xl font-bold text-bashu-bronze">{item.value}</div>
-              <div className="mt-1 font-semibold text-sm text-ink">{item.label}</div>
-              <p className="mt-2 text-xs text-muted">{item.note}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* 学习资源与培训入口 */}
-      <Section title="培养合作与对接通道" subtitle="学术审核为先 · 专业对接服务" bg="paper">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: School, title: "高校合作培养对接", desc: "面向联盟内高校及社会合作院校，提供联合培养、实训共建、联合课程开发对接服务。请提交院校资质与合作意向书，研究院学术委员会评估后安排对接。" },
-            { icon: Globe, title: "非遗传承人培育对接", desc: "面向各级非遗传承人及非遗保护单位，提供传承人数字化培训、师生结对传承、研学授课等对接服务，需提交传承人认定证书。" },
-            { icon: Cpu, title: "AI实训专项对接", desc: "依托缤果AI学院·AI教育实践基地，面向合作院校学生及社会学员开放AI文化创意实训名额，请通过官方渠道提交申请，研究院审核后统一安排。" },
-            { icon: Award, title: "产教联盟专项培养", desc: "《巴蜀文化数字化青年学者培养计划》及《AI+文化数字化实训项目》面向联盟成员院校开放，欢迎联盟内院校申报专项培养名额。" },
-            { icon: Users, title: "社会专业人才培训", desc: "针对政府干部、文旅企业、文博机构人员，开展数字化文化贸易与城市美学塑造专题培训，欢迎相关单位联系研究院提交培训需求。" },
-            { icon: Microscope, title: "非遗数字研学对接", desc: "面向中小学、社区、研学基地、文旅景区提供非遗数字研学课程与实践方案，研究院提供学术课程指导与传承人资源支撑，欢迎联系对接。" },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div key={i} className="rounded-2xl border border-border bg-snow p-6 shadow-sm">
-                <Icon className="h-9 w-9 text-bashu-bronze" />
-                <h3 className="mt-3 font-serif text-base font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted leading-relaxed">{item.desc}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="mt-8 rounded-2xl border border-bashu-bronze/30 bg-bashu-bronze/5 p-6 text-center">
-          <p className="text-sm text-muted">
-            所有培养合作申请均设有学术审核环节。涉及产教联盟、非遗传承、缤果AI实训、非遗数字研学的对接，额外进行学术资质审核，确保合作方与研究院学术定位匹配。
-          </p>
-          <p className="mt-2 text-sm font-medium text-ink">
-            联系邮箱：contact@digitalbashu.org.cn　电话：028-85769208
           </p>
         </div>
       </Section>
