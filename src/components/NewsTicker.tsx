@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-const items = [
+const itemsCN = [
   { type: "新闻", text: "研究院与某市文旅局签署巴蜀文化数字化战略合作协议" },
   { type: "活动", text: "产业联盟年度峰会将于本季度举行，敬请关注" },
   { type: "成果", text: "三星堆数字复原项目入选省级文化数字化示范案例" },
@@ -10,13 +11,26 @@ const items = [
   { type: "联盟", text: "新成员加入产业联盟，共同推动巴蜀文化数字化转型" },
 ];
 
+const itemsEN = [
+  { type: "News", text: "The Institute signs a Bashu culture digitization strategic cooperation agreement with a municipal cultural tourism bureau" },
+  { type: "Event", text: "The Industry Alliance Annual Summit will be held this quarter — stay tuned" },
+  { type: "Outcome", text: "The Sanxingdui digital restoration project selected as a provincial cultural digitization model case" },
+  { type: "Partnership", text: "Co-developing Bashu cultural digital education curricula with multiple universities" },
+  { type: "Alliance", text: "New members join the Industry Alliance to jointly advance Bashu culture's digital transformation" },
+];
+
 export function NewsTicker() {
+  const pathname = usePathname();
+  const isEN = pathname.startsWith("/en");
+  const items = isEN ? itemsEN : itemsCN;
+  const label = isEN ? "Latest Updates" : "最新动态";
+
   return (
     <section className="border-b border-border bg-snow py-4">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4 overflow-hidden">
           <span className="shrink-0 font-serif text-sm font-semibold text-bashu-bronze">
-            最新动态
+            {label}
           </span>
           <div className="flex-1 overflow-hidden">
             <motion.div
