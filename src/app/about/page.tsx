@@ -2,7 +2,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 
 export const metadata = {
-  title: "关于我们 | 巴蜀文化数字研究院",
+  title: "研究院概况 | 巴蜀文化数字研究院",
   description:
     "巴蜀文化数字研究院：巴蜀文化数字化专业学术研究机构，巴蜀文化创意（数字）产教联盟学术引领单位，缤果AI学院·AI教育实践基地，非遗数字研学·实践合作载体。",
 };
@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        title="关于我们"
+        title="研究院概况"
         subtitle="巴蜀文化数字化专业学术研究机构"
         desc="巴蜀文化创意（数字）产教联盟学术引领单位 · 缤果AI学院·AI教育实践基地 · 非遗数字研学·实践合作载体"
       />

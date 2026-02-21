@@ -11,21 +11,23 @@ export function Footer() {
 
   const footerLinks = isEN
     ? [
-        { href: `${base}/about`, label: "About Us" },
-        { href: `${base}/research`, label: "Academic Research" },
-        { href: `${base}/digital-collections`, label: "Bashu Culture System" },
-        { href: `${base}/talent-cultivation`, label: "Talent Development" },
-        { href: `${base}/outcomes`, label: "Research Outcomes & Services" },
+        { href: `${base}/about`, label: "Institute Overview" },
+        { href: `${base}/digital-collections`, label: "Culture System" },
+        { href: `${base}/outcomes`, label: "Digital Outcomes" },
+        { href: `${base}/research`, label: "Industry Empowerment" },
         { href: `${base}/cooperation`, label: "Cooperation" },
+        { href: `${base}/talent-cultivation`, label: "Talent Development" },
+        { href: `${base}/news`, label: "News" },
         { href: `${base}/contact`, label: "Contact Us" },
       ]
     : [
-        { href: "/about", label: "关于我们" },
-        { href: "/research", label: "学术研究" },
-        { href: "/digital-collections", label: "巴蜀文化体系" },
-        { href: "/talent-cultivation", label: "人才培养" },
-        { href: "/outcomes", label: "研究成果与服务" },
+        { href: "/about", label: "研究院概况" },
+        { href: "/digital-collections", label: "文化体系" },
+        { href: "/outcomes", label: "数字成果" },
+        { href: "/research", label: "产业赋能" },
         { href: "/cooperation", label: "合作交流" },
+        { href: "/talent-cultivation", label: "人才培养" },
+        { href: "/news", label: "资讯动态" },
         { href: "/contact", label: "联系我们" },
       ];
 

@@ -85,13 +85,13 @@ export function PartnershipSection() {
             href="/talent-cultivation"
             className="rounded-full bg-bashu-bronze px-6 py-3 text-sm font-medium text-snow transition hover:bg-bashu-bronze-light"
           >
-            了解人才培养
+            人才培养
           </Link>
           <Link
             href="/cooperation"
             className="rounded-full border border-bashu-bronze px-6 py-3 text-sm font-medium text-bashu-bronze transition hover:bg-paper-warm"
           >
-            学术合作交流
+            合作交流
           </Link>
         </motion.div>
       </div>

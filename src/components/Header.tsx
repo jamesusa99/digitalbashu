@@ -8,23 +8,25 @@ import { Menu, X, Languages } from "lucide-react";
 
 const navItemsCN = [
   { href: "/", label: "首页" },
-  { href: "/about", label: "关于我们" },
-  { href: "/research", label: "学术研究" },
-  { href: "/digital-collections", label: "巴蜀文化体系" },
-  { href: "/talent-cultivation", label: "人才培养" },
-  { href: "/outcomes", label: "研究成果与服务" },
+  { href: "/about", label: "研究院概况" },
+  { href: "/digital-collections", label: "文化体系" },
+  { href: "/outcomes", label: "数字成果" },
+  { href: "/research", label: "产业赋能" },
   { href: "/cooperation", label: "合作交流" },
+  { href: "/talent-cultivation", label: "人才培养" },
+  { href: "/news", label: "资讯动态" },
   { href: "/contact", label: "联系我们" },
 ];
 
 const navItemsEN = [
   { href: "/en", label: "Home" },
-  { href: "/en/about", label: "About" },
-  { href: "/en/research", label: "Research" },
-  { href: "/en/digital-collections", label: "Bashu Culture" },
-  { href: "/en/talent-cultivation", label: "Talent Dev." },
+  { href: "/en/about", label: "Institute" },
+  { href: "/en/digital-collections", label: "Culture" },
   { href: "/en/outcomes", label: "Outcomes" },
+  { href: "/en/research", label: "Industry" },
   { href: "/en/cooperation", label: "Cooperation" },
+  { href: "/en/talent-cultivation", label: "Talent Dev." },
+  { href: "/en/news", label: "News" },
   { href: "/en/contact", label: "Contact" },
 ];
 

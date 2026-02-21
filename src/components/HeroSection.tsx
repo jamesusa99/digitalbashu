@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Compass, BookOpen, FlaskConical, Users } from "lucide-react";
 
 const ctaLinks = [
-  { href: "/digital-collections", label: "巴蜀文化体系", icon: Compass },
+  { href: "/digital-collections", label: "文化体系", icon: Compass },
   { href: "/talent-cultivation", label: "人才培养", icon: BookOpen },
-  { href: "/research", label: "学术研究", icon: FlaskConical },
-  { href: "/outcomes", label: "研究成果与服务", icon: Users },
+  { href: "/research", label: "产业赋能", icon: FlaskConical },
+  { href: "/outcomes", label: "数字成果", icon: Users },
 ];
 
 export function HeroSection() {

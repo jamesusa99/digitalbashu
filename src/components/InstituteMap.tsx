@@ -14,7 +14,7 @@ const nodes = [
   },
   {
     id: "culture",
-    label: "巴蜀文化体系",
+    label: "文化体系",
     href: "/digital-collections",
     cx: 22,
     cy: 45,
@@ -30,7 +30,7 @@ const nodes = [
   },
   {
     id: "outcomes",
-    label: "研究成果与服务",
+    label: "数字成果",
     href: "/outcomes",
     cx: 50,
     cy: 75,
@@ -38,7 +38,7 @@ const nodes = [
   },
   {
     id: "research",
-    label: "学术研究",
+    label: "产业赋能",
     href: "/research",
     cx: 50,
     cy: 47,
@@ -131,13 +131,13 @@ export function InstituteMap() {
                 href="/digital-collections"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                巴蜀文化体系
+                文化体系
               </Link>
               <Link
                 href="/research"
                 className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30"
               >
-                学术研究
+                产业赋能
               </Link>
               <Link
                 href="/talent-cultivation"
@@ -151,7 +151,7 @@ export function InstituteMap() {
                 href="/outcomes"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                研究成果与服务
+                数字成果
               </Link>
             </div>
           </div>
