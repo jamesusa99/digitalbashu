@@ -5,44 +5,44 @@ import { motion } from "framer-motion";
 
 const nodes = [
   {
-    id: "academic",
+    id: "about",
+    label: "研究院概况",
+    href: "/about",
+    cx: 50,
+    cy: 20,
+    desc: "学术使命与核心定位",
+  },
+  {
+    id: "culture",
+    label: "巴蜀文化体系",
+    href: "/digital-collections",
+    cx: 22,
+    cy: 45,
+    desc: "古蜀文明·非遗·山水人文",
+  },
+  {
+    id: "talent",
+    label: "人才培养",
+    href: "/talent-cultivation",
+    cx: 78,
+    cy: 45,
+    desc: "产教融合·非遗传承·AI实训",
+  },
+  {
+    id: "outcomes",
+    label: "研究成果与服务",
+    href: "/outcomes",
+    cx: 50,
+    cy: 75,
+    desc: "学术成果转化与产业落地",
+  },
+  {
+    id: "research",
     label: "学术研究",
     href: "/research",
     cx: 50,
-    cy: 35,
-    desc: "数字巴蜀文脉与知识图谱",
-  },
-  {
-    id: "digital",
-    label: "数字项目",
-    href: "/digital-collections",
-    cx: 28,
-    cy: 58,
-    desc: "数字藏品与沉浸式体验",
-  },
-  {
-    id: "education",
-    label: "产教融合",
-    href: "/classroom",
-    cx: 72,
-    cy: 58,
-    desc: "课程与实训平台",
-  },
-  {
-    id: "service",
-    label: "社会服务",
-    href: "/cooperation",
-    cx: 50,
-    cy: 78,
-    desc: "合作交流与共创",
-  },
-  {
-    id: "alliance",
-    label: "产业联盟",
-    href: "/industry-alliance",
-    cx: 50,
-    cy: 50,
-    desc: "汇聚产业力量，价值共赢",
+    cy: 47,
+    desc: "六大研究方向 · 产教联盟学术引领",
     highlight: true,
   },
 ];
@@ -61,7 +61,7 @@ export function InstituteMap() {
             研究院概览
           </h2>
           <p className="mt-2 text-muted">
-            四大核心板块与产业联盟协同，实现全景呈现、全民共享与产业发展
+            五大核心板块协同，学术引领产业落地，产教融合成果全民共享
           </p>
         </motion.div>
 
@@ -120,38 +120,38 @@ export function InstituteMap() {
           <div className="absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
             <div className="flex justify-center gap-4 sm:gap-8">
               <Link
-                href="/research"
+                href="/about"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                学术研究
+                研究院概况
               </Link>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <Link
                 href="/digital-collections"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                数字项目
+                巴蜀文化体系
               </Link>
               <Link
-                href="/industry-alliance"
+                href="/research"
                 className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30"
               >
-                产业联盟
+                学术研究
               </Link>
               <Link
-                href="/classroom"
+                href="/talent-cultivation"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                产教融合
+                人才培养
               </Link>
             </div>
             <div className="flex justify-center">
               <Link
-                href="/cooperation"
+                href="/outcomes"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
-                社会服务
+                研究成果与服务
               </Link>
             </div>
           </div>

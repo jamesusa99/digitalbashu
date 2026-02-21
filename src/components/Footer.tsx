@@ -12,22 +12,20 @@ export function Footer() {
   const footerLinks = isEN
     ? [
         { href: `${base}/about`, label: "About Us" },
-        { href: `${base}/research`, label: "Research" },
-        { href: `${base}/digital-collections`, label: "Digital Collections" },
-        { href: `${base}/outcomes`, label: "Outcomes" },
-        { href: `${base}/industry-alliance`, label: "Industry Alliance" },
+        { href: `${base}/research`, label: "Academic Research" },
+        { href: `${base}/digital-collections`, label: "Bashu Culture System" },
+        { href: `${base}/talent-cultivation`, label: "Talent Development" },
+        { href: `${base}/outcomes`, label: "Research Outcomes & Services" },
         { href: `${base}/cooperation`, label: "Cooperation" },
-        { href: `${base}/classroom`, label: "Culture Classroom" },
         { href: `${base}/contact`, label: "Contact Us" },
       ]
     : [
         { href: "/about", label: "关于我们" },
-        { href: "/research", label: "研究方向" },
-        { href: "/digital-collections", label: "数字全景" },
-        { href: "/outcomes", label: "成果发布" },
-        { href: "/industry-alliance", label: "产业联盟" },
+        { href: "/research", label: "学术研究" },
+        { href: "/digital-collections", label: "巴蜀文化体系" },
+        { href: "/talent-cultivation", label: "人才培养" },
+        { href: "/outcomes", label: "研究成果与服务" },
         { href: "/cooperation", label: "合作交流" },
-        { href: "/classroom", label: "文化课堂" },
         { href: "/contact", label: "联系我们" },
       ];
 
@@ -84,8 +82,13 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <div className="mt-10 border-t border-snow/20 pt-8 text-center text-xs text-snow/50">
-          © {new Date().getFullYear()} {isEN ? "Bashu Culture Digital Research Institute. All rights reserved." : "巴蜀文化数字研究院 版权所有"}
+        <div className="mt-10 border-t border-snow/20 pt-8 text-center text-xs text-snow/50 space-y-1">
+          <p className="text-snow/40">
+            {isEN
+              ? "Academic Lead Unit of Bashu Culture Creative (Digital) Industry-Education Alliance | Bingo AI College · AI Education Practice Base of Bashu Institute | ICH Digital Study Tour · Practice Cooperation Partner"
+              : "巴蜀文化创意（数字）产教联盟学术引领单位 | 缤果AI学院·巴蜀文化数字研究院AI教育实践基地 | 非遗数字研学·实践合作载体"}
+          </p>
+          <p>© {new Date().getFullYear()} {isEN ? "Bashu Culture Digital Research Institute. All rights reserved." : "巴蜀文化数字研究院 版权所有"}</p>
         </div>
       </div>
     </footer>

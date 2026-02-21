@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Compass, BookOpen, FlaskConical, Users } from "lucide-react";
 
 const ctaLinks = [
-  { href: "/digital-collections", label: "探索数字全景", icon: Compass },
-  { href: "/classroom", label: "走进文化课堂", icon: BookOpen },
-  { href: "/research", label: "了解研究项目", icon: FlaskConical },
-  { href: "/industry-alliance", label: "加入产业联盟", icon: Users },
+  { href: "/digital-collections", label: "巴蜀文化体系", icon: Compass },
+  { href: "/talent-cultivation", label: "人才培养", icon: BookOpen },
+  { href: "/research", label: "学术研究", icon: FlaskConical },
+  { href: "/outcomes", label: "研究成果与服务", icon: Users },
 ];
 
 export function HeroSection() {
@@ -50,6 +50,14 @@ export function HeroSection() {
           className="mt-6 max-w-2xl text-lg text-snow/90 sm:text-xl"
         >
           数字科技唤醒巴蜀文脉，文化遗产照亮未来征程
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.28 }}
+          className="mt-3 max-w-3xl text-sm text-snow/60 sm:text-base"
+        >
+          巴蜀文化数字化研究与传承的专业学术平台 · 巴蜀文化创意（数字）产教联盟学术引领单位 · 缤果AI学院·AI教育实践基地 · 非遗数字研学·实践合作载体
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

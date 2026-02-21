@@ -2,17 +2,18 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 
 export const metadata = {
-  title: "研究方向 | 巴蜀文化数字研究院",
+  title: "学术研究 | 巴蜀文化数字研究院",
   description:
-    "国家文化数字化战略下，研究院聚焦文化大数据与标准化、人工智能+文化生产力、数字消费新场景，以及文化资源资产化、产教融合、红色民族文化保护、文化普惠四大板块。",
+    "巴蜀文化数字研究院学术研究板块：聚焦文化大数据与标准化、人工智能+文化生产力、数字消费新场景，以及文化资源资产化、产教融合、红色民族文化保护、文化普惠四大核心研究板块。",
 };
 
 export default function ResearchPage() {
   return (
     <>
       <PageHero
-        title="研究方向"
-        subtitle="国家战略驱动，四轮板块协同"
+        title="学术研究"
+        subtitle="国家战略驱动，学术引领产业落地"
+        desc="以巴蜀文化数字化理论研究为核心，开展古蜀文明、非遗传承、红色文化、AI技术应用等六大研究方向，为产教联盟、缤果AI学院与非遗数字研学提供学术支撑。"
       />
       <Section
         title="国家战略维度的核心研究方向"

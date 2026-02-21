@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Package, Globe, LayoutGrid, ExternalLink } from "lucide-react";
 
 export const metadata = {
-  title: "数字全景 | 巴蜀文化数字研究院",
+  title: "巴蜀文化体系 | 巴蜀文化数字研究院",
   description:
-    "汇聚三星堆、川剧、非遗等巴蜀文化数字藏品与虚拟展陈，提供线上沉浸式浏览与互动体验。3D/VR 展示入口，云景长征、深艺交等。",
+    "系统化呈现巴蜀文化核心资源：古蜀文明（三星堆）、巴蜀非遗（川剧变脸、蜀锦、川茶）、大熊猫文化、巴蜀山水，以及数字藏品与3D/VR沉浸式展示入口。",
 };
 
 const DIGITAL_COLLECTIONS = [
@@ -91,8 +91,9 @@ export default function DigitalCollectionsPage() {
   return (
     <>
       <PageHero
-        title="数字全景"
-        subtitle="数字藏品与沉浸式体验"
+        title="巴蜀文化体系"
+        subtitle="系统化呈现 · 学术研究基础载体"
+        desc="完整呈现古蜀文明、巴蜀非遗、大熊猫文化、巴蜀山水人文等核心文化资源，同步展示数字藏品与3D/VR沉浸式体验成果，作为研究院学术研究与产业落地的文化资源基础。"
       />
       <Section title="数字展示" subtitle="探索巴蜀文化数字化成果">
         <div className="mx-auto max-w-3xl text-center">

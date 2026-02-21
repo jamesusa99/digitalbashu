@@ -1,17 +1,18 @@
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 export const metadata = {
-  title: "成果发布 | 巴蜀文化数字研究院",
+  title: "研究成果与服务 | 巴蜀文化数字研究院",
   description:
-    "研究院数字化重大项目成果、融合出版与学术研究、数字化教育与产教融合、社会服务与文化传播等核心产出与示范案例。",
+    "研究院研究成果与服务：数字化重大项目成果、融合出版与学术研究、数字化教育与产教融合、社会服务与文化传播等核心产出与示范案例，以及联盟赋能、成果转化相关服务。",
 };
 
 export default function OutcomesPage() {
   return (
     <>
       <PageHero
-        title="成果发布"
-        subtitle="数字化成果与示范案例"
+        title="研究成果与服务"
+        subtitle="学术成果转化 · 产业落地服务 · 社会服务共享"
+        desc="整合数字项目成果、学术研究、产教融合成果与社会服务，是研究院学术引领与产业落地双重责任的重要载体。"
       />
       {/* 一、数字化重大项目成果 */}
       <Section

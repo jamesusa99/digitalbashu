@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Compass, BookOpen, FlaskConical, Users } from "lucide-react";
 
 const ctaLinks = [
-  { href: "/en/digital-collections", label: "Explore Digital Collections", icon: Compass },
-  { href: "/en/classroom", label: "Culture Classroom", icon: BookOpen },
-  { href: "/en/research", label: "Research Directions", icon: FlaskConical },
-  { href: "/en/industry-alliance", label: "Join the Alliance", icon: Users },
+  { href: "/en/digital-collections", label: "Bashu Culture System", icon: Compass },
+  { href: "/en/talent-cultivation", label: "Talent Development", icon: BookOpen },
+  { href: "/en/research", label: "Academic Research", icon: FlaskConical },
+  { href: "/en/outcomes", label: "Outcomes & Services", icon: Users },
 ];
 
 export function HeroSectionEN() {
@@ -49,6 +49,14 @@ export function HeroSectionEN() {
           className="mt-6 max-w-2xl text-lg text-snow/90 sm:text-xl"
         >
           Where digital technology awakens ancient Bashu culture, and cultural heritage lights the way forward.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.28 }}
+          className="mt-3 max-w-3xl text-sm text-snow/60 sm:text-base"
+        >
+          The Professional Academic Platform for Bashu Culture Digitalisation · Academic Lead Unit of the Bashu Culture Creative (Digital) Industry-Education Alliance · Bingo AI College · AI Education Practice Base · ICH Digital Study Tours · Practice Partner
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -5,6 +5,7 @@ interface SectionProps {
   subtitle?: string;
   children: ReactNode;
   className?: string;
+  bg?: "paper" | "snow" | "paper-warm";
 }
 
 export function Section({
@@ -12,9 +13,11 @@ export function Section({
   subtitle,
   children,
   className = "",
+  bg,
 }: SectionProps) {
+  const bgClass = bg === "paper" ? "bg-paper" : bg === "paper-warm" ? "bg-paper-warm" : "";
   return (
-    <section className={`py-12 sm:py-16 ${className}`}>
+    <section className={`py-12 sm:py-16 ${bgClass} ${className}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <div className="mb-10 text-center">

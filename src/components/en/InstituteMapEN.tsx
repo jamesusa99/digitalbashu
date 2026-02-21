@@ -4,11 +4,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const nodes = [
-  { id: "academic", label: "Research", href: "/en/research", cx: 50, cy: 35, desc: "Digital Bashu knowledge & scholarship" },
-  { id: "digital", label: "Digital Projects", href: "/en/digital-collections", cx: 28, cy: 58, desc: "Digital collections & immersive experience" },
-  { id: "education", label: "Industry-Education", href: "/en/classroom", cx: 72, cy: 58, desc: "Curriculum & training platform" },
-  { id: "service", label: "Social Service", href: "/en/cooperation", cx: 50, cy: 78, desc: "Cooperation & co-creation" },
-  { id: "alliance", label: "Industry Alliance", href: "/en/industry-alliance", cx: 50, cy: 50, desc: "Gathering industrial strength, creating shared value", highlight: true },
+  { id: "about", label: "Institute Overview", href: "/en/about", cx: 50, cy: 20, desc: "Academic mission & positioning" },
+  { id: "culture", label: "Bashu Culture", href: "/en/digital-collections", cx: 22, cy: 45, desc: "Ancient Shu, ICH, nature & humanities" },
+  { id: "talent", label: "Talent Dev.", href: "/en/talent-cultivation", cx: 78, cy: 45, desc: "Industry-education · ICH · AI training" },
+  { id: "outcomes", label: "Outcomes & Services", href: "/en/outcomes", cx: 50, cy: 75, desc: "Academic outcomes & industry implementation" },
+  { id: "research", label: "Academic Research", href: "/en/research", cx: 50, cy: 47, desc: "Six research directions · Alliance academic leadership", highlight: true },
 ];
 
 export function InstituteMapEN() {
@@ -25,7 +25,7 @@ export function InstituteMapEN() {
             Institute Overview
           </h2>
           <p className="mt-2 text-muted">
-            Four pillars and an industry alliance — panoramic presentation, shared access, and industry growth
+            Five core pillars — academic leadership driving industry implementation, shared access for all
           </p>
         </motion.div>
 
@@ -62,15 +62,15 @@ export function InstituteMapEN() {
           </svg>
           <div className="absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
             <div className="flex justify-center gap-4 sm:gap-8">
-              <Link href="/en/research" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Research</Link>
+              <Link href="/en/about" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Institute Overview</Link>
             </div>
-            <div className="flex justify-between">
-              <Link href="/en/digital-collections" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Digital Projects</Link>
-              <Link href="/en/industry-alliance" className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30">Industry Alliance</Link>
-              <Link href="/en/classroom" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Industry-Education</Link>
+            <div className="flex justify-between items-center">
+              <Link href="/en/digital-collections" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Bashu Culture</Link>
+              <Link href="/en/research" className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30">Academic Research</Link>
+              <Link href="/en/talent-cultivation" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Talent Dev.</Link>
             </div>
             <div className="flex justify-center">
-              <Link href="/en/cooperation" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Social Service</Link>
+              <Link href="/en/outcomes" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Outcomes & Services</Link>
             </div>
           </div>
         </motion.div>
