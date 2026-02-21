@@ -15,7 +15,7 @@ const nodes = [
   {
     id: "culture",
     label: "文化体系",
-    href: "/digital-collections",
+    href: "/culture-system",
     cx: 22,
     cy: 45,
     desc: "古蜀文明·非遗·山水人文",
@@ -31,7 +31,7 @@ const nodes = [
   {
     id: "outcomes",
     label: "数字成果",
-    href: "/outcomes",
+    href: "/research",
     cx: 50,
     cy: 75,
     desc: "学术成果转化与产业落地",
@@ -39,10 +39,10 @@ const nodes = [
   {
     id: "research",
     label: "产业赋能",
-    href: "/research",
+    href: "/industry",
     cx: 50,
     cy: 47,
-    desc: "六大研究方向 · 产教联盟学术引领",
+    desc: "文创·文旅·IP授权·联盟赋能",
     highlight: true,
   },
 ];
@@ -128,13 +128,13 @@ export function InstituteMap() {
             </div>
             <div className="flex justify-between items-center">
               <Link
-                href="/digital-collections"
+                href="/culture-system"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
                 文化体系
               </Link>
               <Link
-                href="/research"
+                href="/industry"
                 className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30"
               >
                 产业赋能
@@ -148,7 +148,7 @@ export function InstituteMap() {
             </div>
             <div className="flex justify-center">
               <Link
-                href="/outcomes"
+                href="/research"
                 className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg"
               >
                 数字成果

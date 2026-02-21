@@ -12,9 +12,9 @@ export function Footer() {
   const footerLinks = isEN
     ? [
         { href: `${base}/about`, label: "Institute Overview" },
-        { href: `${base}/digital-collections`, label: "Culture System" },
-        { href: `${base}/outcomes`, label: "Digital Outcomes" },
-        { href: `${base}/research`, label: "Industry Empowerment" },
+        { href: `${base}/culture-system`, label: "Culture System" },
+        { href: `${base}/research`, label: "Digital Outcomes" },
+        { href: `${base}/industry`, label: "Industry Empowerment" },
         { href: `${base}/cooperation`, label: "Cooperation" },
         { href: `${base}/talent-cultivation`, label: "Talent Development" },
         { href: `${base}/news`, label: "News" },
@@ -22,9 +22,9 @@ export function Footer() {
       ]
     : [
         { href: "/about", label: "研究院概况" },
-        { href: "/digital-collections", label: "文化体系" },
-        { href: "/outcomes", label: "数字成果" },
-        { href: "/research", label: "产业赋能" },
+        { href: "/culture-system", label: "文化体系" },
+        { href: "/research", label: "数字成果" },
+        { href: "/industry", label: "产业赋能" },
         { href: "/cooperation", label: "合作交流" },
         { href: "/talent-cultivation", label: "人才培养" },
         { href: "/news", label: "资讯动态" },

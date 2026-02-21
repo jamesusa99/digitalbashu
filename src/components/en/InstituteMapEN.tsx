@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const nodes = [
   { id: "about", label: "Institute Overview", href: "/en/about", cx: 50, cy: 20, desc: "Academic mission & positioning" },
-  { id: "culture", label: "Culture System", href: "/en/digital-collections", cx: 22, cy: 45, desc: "Ancient Shu, ICH, nature & humanities" },
+  { id: "culture", label: "Culture System", href: "/en/culture-system", cx: 22, cy: 45, desc: "Ancient Shu, ICH, nature & humanities" },
   { id: "talent", label: "Talent Dev.", href: "/en/talent-cultivation", cx: 78, cy: 45, desc: "Industry-education · ICH · AI training" },
-  { id: "outcomes", label: "Digital Outcomes", href: "/en/outcomes", cx: 50, cy: 75, desc: "Academic outcomes & industry implementation" },
-  { id: "research", label: "Industry Empowerment", href: "/en/research", cx: 50, cy: 47, desc: "Six research directions · Alliance academic leadership", highlight: true },
+  { id: "outcomes", label: "Digital Outcomes", href: "/en/research", cx: 50, cy: 75, desc: "Academic outcomes & industry implementation" },
+  { id: "research", label: "Industry Empowerment", href: "/en/industry", cx: 50, cy: 47, desc: "Cultural creative · Tourism · IP · Alliance", highlight: true },
 ];
 
 export function InstituteMapEN() {
@@ -65,12 +65,12 @@ export function InstituteMapEN() {
               <Link href="/en/about" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Institute Overview</Link>
             </div>
             <div className="flex justify-between items-center">
-              <Link href="/en/digital-collections" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Culture System</Link>
-              <Link href="/en/research" className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30">Industry Empowerment</Link>
+              <Link href="/en/culture-system" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Culture System</Link>
+              <Link href="/en/industry" className="rounded-xl bg-brocade-gold/20 px-4 py-2 text-sm font-semibold text-bashu-teal shadow-md backdrop-blur transition hover:bg-brocade-gold/30">Industry Empowerment</Link>
               <Link href="/en/talent-cultivation" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Talent Dev.</Link>
             </div>
             <div className="flex justify-center">
-              <Link href="/en/outcomes" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Digital Outcomes</Link>
+              <Link href="/en/research" className="rounded-xl bg-snow/95 px-4 py-2 text-sm font-medium text-bashu-bronze shadow-md backdrop-blur transition hover:bg-snow hover:shadow-lg">Digital Outcomes</Link>
             </div>
           </div>
         </motion.div>
