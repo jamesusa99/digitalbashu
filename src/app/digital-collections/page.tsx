@@ -95,7 +95,46 @@ export default function DigitalCollectionsPage() {
         subtitle="系统化呈现 · 学术研究基础载体"
         desc="完整呈现古蜀文明、巴蜀非遗、大熊猫文化、巴蜀山水人文等核心文化资源，同步展示数字藏品与3D/VR沉浸式体验成果，作为研究院学术研究与产业落地的文化资源基础。"
       />
-      <Section title="数字展示" subtitle="探索巴蜀文化数字化成果">
+      {/* 文化根基 */}
+      <Section title="文化根基与历史底蕴" subtitle="研究院开展一切数字化工作的学术母体">
+        <div className="mx-auto max-w-3xl space-y-4 text-muted mb-8">
+          <p>
+            巴蜀文化作为中华文明的重要组成部分，是研究院开展一切数字化工作的学术母体。
+          </p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              label: "文明发轫",
+              icon: "🏛",
+              text: "源自神秘璀璨的三星堆与金沙文明，在江河交错、沃野千里的自然禀赋中，孕育出开放包容、灵动智慧的民系性格。",
+            },
+            {
+              label: "家国情怀",
+              icon: "🏔",
+              text: "从汉高祖刘邦以巴蜀为基建立大汉，到抗战时期「四川不灭，华夏不亡」的民族脊梁，体现了巴蜀文化深厚的战略地位与民族气节。",
+            },
+            {
+              label: "红色文脉",
+              icon: "🌟",
+              text: "四川作为长征途中的关键转折地，承载了「翻雪山、过草地」「四渡赤水」等改变中国命运的重要红色记忆。",
+            },
+            {
+              label: "民俗技艺",
+              icon: "🎭",
+              text: "涵盖蜀锦、漆艺、川剧、羌绣等具有高度审美与工匠精神的非遗文化资源，是巴蜀文化传承活力的重要载体。",
+            },
+          ].map((item) => (
+            <div key={item.label} className="rounded-xl border border-border bg-snow p-5 shadow-sm">
+              <div className="text-2xl mb-2">{item.icon}</div>
+              <h3 className="font-serif text-base font-semibold text-ink">{item.label}</h3>
+              <p className="mt-2 text-sm text-muted leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="数字展示" subtitle="探索巴蜀文化数字化成果" bg="paper">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-muted">
             汇聚三星堆、川剧、非遗等巴蜀文化数字藏品与虚拟展陈，提供线上沉浸式浏览与互动体验。
